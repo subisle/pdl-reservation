@@ -580,10 +580,11 @@ class _Server(ThreadingHTTPServer):
         super().handle_error(request, client_address)
 
 
-def serve(port: int = 8765, open_browser: bool = True):
-    ST.log(f"服务已启动 http://127.0.0.1:{port}")
-    srv = _Server(("127.0.0.1", port), Handler)
-    url = f"http://127.0.0.1:{port}"
+def serve(host: str = "127.0.0.1", port: int = 8765, open_browser: bool = True):
+    display_host = "127.0.0.1" if host in ("0.0.0.0", "::") else host
+    ST.log(f"服务已启动 http://{display_host}:{port}")
+    srv = _Server((host, port), Handler)
+    url = f"http://{display_host}:{port}"
     if open_browser:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()
     # 后台预热门店目录, 打开即有数据

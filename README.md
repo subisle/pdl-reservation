@@ -185,7 +185,7 @@ python -m pdl_grab.cli catalog --city 郑州市 --refresh  # 强制刷新缓存
 .venv/bin/python -m pdl_grab.cli web --port 8765
 ```
 
-服务只监听 `127.0.0.1`;端口被占用会自动顺延 8765 → 8774。日志在 `~/.pdl_grab/web.log`。
+默认只监听 `127.0.0.1`; Docker 镜像会使用 `0.0.0.0` 以便通过端口映射访问。端口被占用会自动顺延 8765 → 8774。日志在 `~/.pdl_grab/web.log`。
 
 ### 界面功能
 
