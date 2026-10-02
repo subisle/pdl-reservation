@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import json
+import ipaddress
 import os
 import queue
 import threading
@@ -22,7 +23,7 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any, Optional
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlsplit
 
 from .captcha import CaptchaSolver
 from .catalog import fetch as fetch_catalog, to_stores
@@ -39,6 +40,49 @@ from .session import Session, is_bookable, load_sessions
 HTML = Path(__file__).with_name("webui.html")
 # 配置读写要用同一个路径, 否则"保存"和"读取"会指向不同文件
 CONFIG_FILE = os.environ.get("PDL_CONFIG") or "config.json"
+
+
+def _env_list(name: str) -> set[str]:
+    return {item.strip().lower() for item in os.environ.get(name, "").split(",") if item.strip()}
+
+
+def _authority(value: str, default_port: int | None = None) -> tuple[str, int | None] | None:
+    raw = value.strip()
+    if not raw:
+        return None
+    parsed = urlsplit(raw if "://" in raw else f"//{raw}")
+    try:
+        hostname = parsed.hostname
+        port = parsed.port if parsed.port is not None else default_port
+    except ValueError:
+        return None
+    if not hostname:
+        return None
+    return hostname.rstrip(".").lower(), port
+
+
+def _origin(value: str) -> tuple[str, str, int] | None:
+    parsed = urlsplit(value.strip())
+    if parsed.scheme not in ("http", "https") or not parsed.hostname:
+        return None
+    try:
+        port = parsed.port or (443 if parsed.scheme == "https" else 80)
+    except ValueError:
+        return None
+    if parsed.username or parsed.password or parsed.path not in ("", "/") or parsed.query or parsed.fragment:
+        return None
+    return parsed.scheme, parsed.hostname.rstrip(".").lower(), port
+
+
+def _host_allowed(hostname: str) -> bool:
+    configured = _env_list("PDL_ALLOWED_HOSTS")
+    if hostname in configured or hostname in {"localhost", "127.0.0.1", "::1"}:
+        return True
+    try:
+        address = ipaddress.ip_address(hostname)
+    except ValueError:
+        return False
+    return address.is_private or address.is_loopback
 
 
 class State:
@@ -450,7 +494,14 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def _json(self, obj: Any, code: int = 200):
-        self._send(code, json.dumps(obj, ensure_ascii=False).encode(), "application/json; charset=utf-8")
+        self._send(code, json.dumps(obj, ensure_ascii=False).encode(),
+                   "application/json; charset=utf-8", self._cors_headers())
+
+    def _cors_headers(self) -> dict[str, str]:
+        origin = (self.headers.get("Origin") or "").strip()
+        if not origin or not self._origin_ok():
+            return {}
+        return {"Access-Control-Allow-Origin": origin, "Vary": "Origin"}
 
     def do_GET(self):
         path = urlparse(self.path).path
@@ -473,14 +524,37 @@ class Handler(BaseHTTPRequestHandler):
         同时校验 Host 头, 挡 DNS rebinding(把 evil.com 解析到 127.0.0.1)。
         """
         host = (self.headers.get("Host") or "").strip()
-        # Host 必须是 127.0.0.1[:port] 或 localhost[:port]
-        bare = host.rsplit(":", 1)[0] if ":" in host else host
-        if bare not in ("127.0.0.1", "localhost", "[::1]"):
+        host_authority = _authority(host, self.server.server_address[1])
+        if not host_authority or not _host_allowed(host_authority[0]):
             return False
         origin = (self.headers.get("Origin") or "").strip()
         if not origin:
             return True                       # 非浏览器调用(curl/脚本), 无 Origin
-        return origin.split("://", 1)[-1] == host
+        allowed_origins = {_origin(item) for item in _env_list("PDL_ALLOWED_ORIGINS")}
+        request_origin = _origin(origin)
+        if request_origin in allowed_origins:
+            return True
+        if not request_origin:
+            return False
+        return request_origin[1:] == host_authority
+
+    def do_OPTIONS(self):
+        if not self._origin_ok():
+            return self._json({"error": "拒绝非同源请求"}, 403)
+        path = urlparse(self.path).path
+        if not path.startswith("/api/"):
+            return self._json({"error": "not found"}, 404)
+        headers = self._cors_headers()
+        headers.update({
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": self.headers.get(
+                "Access-Control-Request-Headers", "Content-Type"
+            ),
+            "Access-Control-Max-Age": "600",
+        })
+        if self.headers.get("Access-Control-Request-Private-Network") == "true":
+            headers["Access-Control-Allow-Private-Network"] = "true"
+        self._send(204, b"", "text/plain; charset=utf-8", headers)
 
     def do_POST(self):
         if not self._origin_ok():
@@ -521,6 +595,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "text/event-stream; charset=utf-8")
         self.send_header("Cache-Control", "no-cache")
         self.send_header("Connection", "keep-alive")
+        for key, value in self._cors_headers().items():
+            self.send_header(key, value)
         self.end_headers()
         q = ST.subscribe()
         try:
