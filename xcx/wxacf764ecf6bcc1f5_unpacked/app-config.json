@@ -1,0 +1,2101 @@
+{
+  "subPackages": [
+    {
+      "root": "packageLocation/"
+    },
+    {
+      "root": "packageQiyu/",
+      "plugins": {
+        "qiyu-plugin": {
+          "version": "2.12.0",
+          "provider": "wxae5e29812005203f",
+          "appIds": [
+            "wx2033b55ba0eaf5f2",
+            "wx78703c746eccb0d0",
+            "wxa9dd5762b2ba65d6",
+            "wx9572d0552dfc7579",
+            "wx441e80287946d7b6",
+            "wxc94daee5c5b654ad",
+            "wx4d0b88c307eeaf34"
+          ],
+          "subpackage": "/packageQiyu/"
+        }
+      }
+    },
+    {
+      "root": "packagePersonal/"
+    },
+    {
+      "root": "packageWare/",
+      "plugins": {}
+    },
+    {
+      "root": "packageActive/"
+    },
+    {
+      "root": "packageGroup/"
+    },
+    {
+      "root": "packageSubBusi/",
+      "compileToMainPlatform": ["mp-toutiao", "mp-v9tt"]
+    },
+    {
+      "root": "packageBaseComp/"
+    },
+    {
+      "root": "packageCmsComp/"
+    },
+    {
+      "root": "packageWebview/"
+    },
+    {
+      "root": "packageGLeader/"
+    },
+    {
+      "root": "packageTools/"
+    },
+    {
+      "root": "packageRec/"
+    },
+    {
+      "root": "packageMarket/"
+    },
+    {
+      "root": "packageTrade/"
+    },
+    {
+      "root": "packageAssets/"
+    },
+    {
+      "root": "packageOrder/"
+    },
+    {
+      "root": "packageOffline/"
+    },
+    {
+      "root": "packageExternal/"
+    },
+    {
+      "root": "packageDStore/"
+    },
+    {
+      "root": "packageAgents/",
+      "independent": true,
+      "name": "skills",
+      "agent": true
+    },
+    {
+      "root": "packageAgentDetail/",
+      "name": "agentDetail"
+    }
+  ],
+  "entryPagePath": "pages/homepage/homepage.html",
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/mine/mine",
+    "pages/category/category",
+    "pages/o2oshopcart/o2oshopcart",
+    "pages/o2oShopCartPage/o2oShopCartPage",
+    "pages/dshop/dshop",
+    "pages/checkout/checkout",
+    "pages/payprocess/payprocess",
+    "pages/payresult/payresult",
+    "pages/shareFriend/shareFriend",
+    "pages/itemdetail/itemdetail",
+    "pages/webview/webview",
+    "pages/jump/jump",
+    "pages/pickerDemo/pickerDemo",
+    "pages/iconList/iconList",
+    "__plugin__/wxfe70b3f986aad2fb/pages/challenge/index",
+    "packageLocation/address/list/list",
+    "packageLocation/address/detail/detail",
+    "packageLocation/address/location/location",
+    "packageLocation/storelist/storelist",
+    "packageLocation/address/citylist/citylist",
+    "packageLocation/address/addresslist/addresslist",
+    "packageLocation/address/orderAddress/orderAddress",
+    "packageLocation/c9ChooseStore/storeList",
+    "packageLocation/couponStoreList/couponStoreList",
+    "packageQiyu/pages/chat/chat",
+    "packageQiyu/__plugin__/wxae5e29812005203f/pages/chat/chat",
+    "packagePersonal/payprocess/payprocess",
+    "packagePersonal/payresult/payresult",
+    "packagePersonal/orderdetail/orderdetail",
+    "packagePersonal/orderlist/orderlist",
+    "packagePersonal/login/login",
+    "packagePersonal/register/register",
+    "packagePersonal/phoneLogin/phoneLogin",
+    "packagePersonal/coupon/coupon",
+    "packagePersonal/realname/realname",
+    "packagePersonal/vip/vip",
+    "packagePersonal/vip/payCode/storePayCode/storePayCode",
+    "packagePersonal/vip/payCode/payConfig/payConfig",
+    "packagePersonal/vip/payCode/modifyPayCode/modifyPayCode",
+    "packagePersonal/vip/payCode/setPayCode/setPayCode",
+    "packagePersonal/vip/payCode/phoneValid/phoneValid",
+    "packagePersonal/shareFriend/shareFriend",
+    "packagePersonal/personal/personal",
+    "packagePersonal/userInfo/userInfo",
+    "packagePersonal/editpersonal/editpersonal",
+    "packagePersonal/editPhone/editPhone",
+    "packagePersonal/editIdentityCard/editIdentityCard",
+    "packagePersonal/editEmail/editEmail",
+    "packagePersonal/editIDcard/editIDcard",
+    "packagePersonal/pdlRealname/pdlRealname",
+    "packagePersonal/guardianRealname/guardianRealname",
+    "packagePersonal/pdlEvaluate/pdlEvaluate",
+    "packagePersonal/account/accountManage/accountManage",
+    "packagePersonal/account/accountSignout/accountSignout",
+    "packagePersonal/account/accountSafe/accountSafe",
+    "packagePersonal/account/accountAssets/accountAssets",
+    "packagePersonal/account/signoutReason/signoutReason",
+    "packagePersonal/account/signoutResult/signoutResult",
+    "packagePersonal/editorder/editorder",
+    "packagePersonal/feedback/feedback",
+    "packagePersonal/feedbackList/feedbackList",
+    "packageWare/couponPromotion/couponPromotion",
+    "packageWare/promoteSales/promoteSales",
+    "packageWare/cmsTemplate/cmsTemplate",
+    "packageWare/suitGroup/suitGroup",
+    "packageWare/wareSuitGroup/wareSuitGroup",
+    "packageWare/itemdetail/itemdetail",
+    "packageWare/comboDetail/comboDetail",
+    "packageActive/maotai/list/list",
+    "packageActive/maotai/book/book",
+    "packageActive/maotai/storeList/storeList",
+    "packageActive/maotai/buyExplain/buyExplain",
+    "packageActive/maotai/home/home",
+    "packageActive/maotai/register/register",
+    "packageActive/maotai/luckylist/luckylist",
+    "packageActive/maotai/qualification/qualification",
+    "packageActive/maotai/extraDesc/extraDesc",
+    "packageActive/maotai/winList/winList",
+    "packageActive/maotai/publicity/publicity",
+    "packageActive/signIn/signIn",
+    "packageActive/signwebview/signwebview",
+    "packageActive/cmsTemplate/cmsTemplate",
+    "packageActive/subscribeInterim/subscribeInterim",
+    "packageActive/present/presentCoupon",
+    "packageGroup/invalidgroup/invalidgroup",
+    "packageGroup/selectguider/selectguider",
+    "packageGroup/guiderlist/guiderlist",
+    "packageGroup/applyguider/applyguider",
+    "packageGroup/applyguiderinfo/applyguiderinfo",
+    "packageSubBusi/subHome/subHome",
+    "packageSubBusi/categorySub/categorySub",
+    "packageSubBusi/bldSub/categorySub/categorySub",
+    "packageSubBusi/mineSub/mineSub",
+    "packageSubBusi/cartSub/cartSub",
+    "packageSubBusi/bldSub/storeList/storeList",
+    "packageSubBusi/bldSub/deliverySelection/deliverySelection",
+    "packageBaseComp/base_holder/base_holder",
+    "packageCmsComp/cms_holder/cms_holder",
+    "packageWebview/webview/webview",
+    "packageWebview/dshop/dshop",
+    "packageGLeader/ordermanage/ordermanage",
+    "packageGLeader/individualcenter/userlist/userlist",
+    "packageGLeader/individualcenter/index/index",
+    "packageGLeader/individualcenter/userinfo/userinfo",
+    "packageGLeader/individualcenter/accountlist/accountlist",
+    "packageGLeader/individualcenter/accountdetails/accountdetails",
+    "packageGLeader/individualcenter/myBalance/myBalance",
+    "packageGLeader/individualcenter/withdraw/withdraw",
+    "packageGLeader/individualcenter/withdrawInfo/withdrawInfo",
+    "packageGLeader/auth/auth",
+    "packageGLeader/orderdetail/orderdetail",
+    "packageGLeader/afterSaleDetail/afterSaleDetail",
+    "packageGLeader/abnormal/abnormal",
+    "packageGLeader/individualcenter/termservice/termservice",
+    "packageGLeader/individualcenter/commissionlist/commissionlist",
+    "packageGLeader/individualcenter/commissiondesc/commissiondesc",
+    "packageGLeader/individualcenter/commissiondetail/commissiondetail",
+    "packageGLeader/authManage/authManage",
+    "packageGLeader/applyForAuth/applyForAuth",
+    "packageGLeader/expressDetail/expressDetail",
+    "packageGLeader/invite/invite",
+    "packageGLeader/groupBuy/activity",
+    "packageGLeader/salesDetail/salesDetail",
+    "packageTools/envGroup/envGroup",
+    "packageTools/defend/defend",
+    "packageTools/privacy/privacy",
+    "packageTools/customPrivacy/customPrivacy",
+    "packageTools/workBench/verifyHome/verifyHome",
+    "packageTools/workBench/verifyPage/verifyPage",
+    "packageTools/workBench/verifyResult/verifyResult",
+    "packageTools/workBench/searchPage/searchPage",
+    "packageTools/workBench/flowRecords/flowRecords",
+    "packageTools/workBench/couponRecords/couponRecords",
+    "packageTools/workBench/expendRefund/expendRefund",
+    "packageRec/search/search",
+    "packageRec/wareRank/wareRank",
+    "packageRec/wareRank/rankingRule",
+    "packageRec/seckill/seckill",
+    "packageRec/couponPromotion/couponPromotion",
+    "packageRec/promoteSales/promoteSales",
+    "packageMarket/userInfoGift/userInfoGift",
+    "packageMarket/spellgroup/groupactivity/groupactivity",
+    "packageMarket/spellgroup/groupActivityDetail/groupActivityDetail",
+    "packageMarket/spellgroup/groupBuying/groupBuying",
+    "packageMarket/spellgroup/storelist/storelist",
+    "packageMarket/spellgroup/groupRecord/groupRecord",
+    "packageMarket/spellgroup/checkorder/checkorder",
+    "packageMarket/printing/index/index",
+    "packageMarket/printing/rewardInfo/rewardInfo",
+    "packageMarket/vote/voteIndex/voteIndex",
+    "packageMarket/vote/voteApply/voteApply",
+    "packageMarket/vote/voteWork/voteWork",
+    "packageMarket/vote/voteRank/voteRank",
+    "packageMarket/newSignIn/newSignIn",
+    "packageMarket/newSignIn/reSignDetail/reSignDetail",
+    "packageMarket/newSignIn/reSignRecord/reSignRecord",
+    "packageMarket/exchange/exchange",
+    "packageMarket/bargain/bargainDetail",
+    "packageMarket/bargain/bargainList",
+    "packageMarket/bargain/cutRecord",
+    "packageMarket/bargain/helpCut",
+    "packageMarket/bargain/awardPage",
+    "packageMarket/pointMarket/home/home",
+    "packageMarket/pointMarket/wareDetail/wareDetail",
+    "packageMarket/pointMarket/more/more",
+    "packageMarket/pointMarket/orderConfirm/orderConfirm",
+    "packageMarket/pointMarket/orderList/orderList",
+    "packageMarket/pointMarket/orderDetail/orderDetail",
+    "packageMarket/pointIntegral/home/home",
+    "packageMarket/pointIntegral/productDetail/productDetail",
+    "packageMarket/pointIntegral/floorProducts/floorProducts",
+    "packageMarket/pointIntegral/exchangeRecord/exchangeRecord",
+    "packageMarket/pointIntegral/exchangeResult/exchangeResult",
+    "packageMarket/pointIntegral/recordDetail/recordDetail",
+    "packageMarket/invitationGift/invitationGift",
+    "packageMarket/giftReward/giftReward",
+    "packageMarket/distribution/home/home",
+    "packageMarket/distribution/activeList/activeList",
+    "packageMarket/distribution/activeDetail/activeDetail",
+    "packageMarket/distribution/orderList/orderList",
+    "packageMarket/distribution/commission/commission",
+    "packageMarket/distribution/withdrawDetail/withdrawDetail",
+    "packageMarket/distribution/withdrawSetting/withdrawSetting",
+    "packageTrade/cashier/cashier",
+    "packageTrade/password/password",
+    "packageTrade/payprocess/payprocess",
+    "packageTrade/payresult/payresult",
+    "packageTrade/checkorder/checkorder",
+    "packageTrade/checkorder/invoice/invoice",
+    "packageTrade/orderRemark/orderRemark",
+    "packageTrade/invoiceCenter/home/home",
+    "packageTrade/invoiceCenter/c9Home/c9Home",
+    "packageTrade/invoiceCenter/detail/detail",
+    "packageTrade/invoiceCenter/orderList/orderList",
+    "packageTrade/invoiceCenter/getInvoice/getInvoice",
+    "packageTrade/invoiceCenter/infoInput/infoInput",
+    "packageTrade/invoiceCenter/electronicInvoice/electronicInvoice",
+    "packageAssets/premiumMember/premiumMember",
+    "packageAssets/vipBuyRecord/vipBuyRecord",
+    "packageAssets/benefits/list",
+    "packageAssets/benefits/detail",
+    "packageAssets/bonusPoint/bonusPoint",
+    "packageAssets/bonusPoint/sbybPoint",
+    "packageAssets/costDetail/costDetail",
+    "packageAssets/discount/discount",
+    "packageAssets/superValueCard/myCardList/myCardList",
+    "packageAssets/superValueCard/myCardDetail/myCardDetail",
+    "packageAssets/superValueCard/cardList/cardList",
+    "packageAssets/superValueCard/cardDetail/cardDetail",
+    "packageAssets/superValueCard/gift/gift",
+    "packageAssets/superValueCard/useRecord/useRecord",
+    "packageAssets/superValueCard/storeList/storeList",
+    "packageAssets/superValueCard/selectCity/selectCity",
+    "packageAssets/superValueCard/selectAddress/selectAddress",
+    "packageAssets/superValueCard/selectStore/selectStore",
+    "packageAssets/growthValue/growthValue",
+    "packageAssets/giftCard/giftCard",
+    "packageAssets/giftCoupon/giftCoupon",
+    "packageAssets/coupon/coupon",
+    "packageAssets/coupon/couponUsedRecord/couponUsedRecord",
+    "packageAssets/coupon/settlementCouponOnline/settlementCouponOnline",
+    "packageAssets/coupon/settlementCouponOffline/settlementCouponOffline",
+    "packageAssets/coupon/skylCoupon/skylCoupon",
+    "packageAssets/coupon/threePartyCoupon/threePartyCoupon",
+    "packageAssets/couponCode/couponCode",
+    "packageOrder/logisticDetail/logisticDetail",
+    "packageOrder/qrbarcode/qrbarcode",
+    "packageOrder/orderdetail/orderdetail",
+    "packageOrder/orderlist/orderlist",
+    "packageOrder/ordersearch/ordersearch",
+    "packageOrder/orderlistSub/orderlistSub",
+    "packageOrder/orderevaluate/evaluate/evaluate",
+    "packageOrder/orderevaluate/evaluateResult/evaluateResult",
+    "packageOrder/orderevaluate/evaluateDetail/evaluateDetail",
+    "packageOffline/checkout/checkout",
+    "packageOffline/shopcart/shopcart",
+    "packageOffline/shopcart/storeList/storeList",
+    "packageExternal/index/index",
+    "packageExternal/reservationhome/reservationhome",
+    "packageExternal/reservationlist/reservationlist",
+    "packageExternal/reservationinfo/reservationinfo",
+    "packageExternal/myreservationlist/myreservationlist",
+    "packageExternal/myreservationinfo/myreservationinfo",
+    "packageExternal/myreservationhistorylist/myreservationhistorylist",
+    "packageExternal/reservationresult/reservationresult",
+    "packageExternal/rulescenter/rulescenter",
+    "packageExternal/moduleHome/index",
+    "packageExternal/moduleTea/index/index",
+    "packageExternal/moduleTea/reservationhome/reservationhome",
+    "packageExternal/moduleTea/reservationlist/reservationlist",
+    "packageExternal/moduleTea/reservationinfo/reservationinfo",
+    "packageExternal/moduleTea/myreservationlist/myreservationlist",
+    "packageExternal/moduleTea/myreservationinfo/myreservationinfo",
+    "packageExternal/moduleTea/myreservationhistorylist/myreservationhistorylist",
+    "packageExternal/moduleTea/reservationresult/reservationresult",
+    "packageExternal/moduleTea/rulescenter/rulescenter",
+    "packageExternal/moduleMarket/index/index",
+    "packageExternal/moduleMarket/reservationhome/reservationhome",
+    "packageExternal/moduleMarket/companion/companion",
+    "packageExternal/moduleMarket/reservationlist/reservationlist",
+    "packageExternal/moduleMarket/reservationinfo/reservationinfo",
+    "packageExternal/moduleMarket/myreservationlist/myreservationlist",
+    "packageExternal/moduleMarket/myreservationinfo/myreservationinfo",
+    "packageExternal/moduleMarket/myreservationhistorylist/myreservationhistorylist",
+    "packageExternal/moduleMarket/reservationresult/reservationresult",
+    "packageExternal/moduleMarket/rulescenter/rulescenter",
+    "packageExternal/reservationindex/reservationindex",
+    "packageExternal/modelEmployee/employeelogin/employeelogin",
+    "packageExternal/modelEmployee/employee/employee",
+    "packageExternal/modelEmployee/scancode/scancode",
+    "packageExternal/modelEmployee/writeoffnotes/writeoffnotes",
+    "packageExternal/modelEmployee/addrule/addrule",
+    "packageDStore/parkHome/parkHome",
+    "packageDStore/storeList/storeList",
+    "packageDStore/orderList/orderList",
+    "packageDStore/orderDetail/orderDetail",
+    "packageDStore/checkOrder/checkOrder",
+    "packageDStore/coupon/coupon",
+    "packageDStore/addPlate/addPlate",
+    "packageDStore/parking/parking",
+    "packageAgents/_holder/index",
+    "packageAgentDetail/address/addresslist/addresslist",
+    "packageAgentDetail/store/storelist/storelist",
+    "packageAgentDetail/wareList/wareList",
+    "packageAgentDetail/cart/cart",
+    "packageAgentDetail/checkorder/checkorder"
+  ],
+  "page": {
+    "pages/homepage/homepage.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "onReachBottomDistance": 600,
+        "componentPlaceholder": {
+          "friend-circle": "view"
+        }
+      }
+    },
+    "pages/mine/mine.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    "pages/category/category.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "category-component": "view",
+          "search-inner": "view"
+        }
+      }
+    },
+    "pages/o2oshopcart/o2oshopcart.html": {
+      "window": {
+        "disableScroll": false,
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark",
+        "componentPlaceholder": {
+          "cart": "view"
+        }
+      }
+    },
+    "pages/o2oShopCartPage/o2oShopCartPage.html": {
+      "window": {
+        "disableScroll": false,
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark",
+        "componentPlaceholder": {
+          "cart": "view"
+        }
+      }
+    },
+    "pages/dshop/dshop.html": {
+      "window": {}
+    },
+    "pages/checkout/checkout.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#FE524B",
+        "navigationBarTitleText": "确认订单",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    "pages/payprocess/payprocess.html": {
+      "window": {}
+    },
+    "pages/payresult/payresult.html": {
+      "window": {}
+    },
+    "pages/shareFriend/shareFriend.html": {
+      "window": {
+        "navigationBarTitleText": "分享给好友"
+      }
+    },
+    "pages/itemdetail/itemdetail.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "pages/webview/webview.html": {
+      "window": {}
+    },
+    "pages/jump/jump.html": {
+      "window": {}
+    },
+    "pages/pickerDemo/pickerDemo.html": {
+      "window": {}
+    },
+    "pages/iconList/iconList.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F5F5F5",
+        "backgroundTextStyle": "light"
+      }
+    },
+    "packageLocation/address/list/list.html": {
+      "window": {
+        "navigationBarTitleText": "选择收货地址"
+      }
+    },
+    "packageLocation/address/detail/detail.html": {
+      "window": {
+        "navigationBarTitleText": "新增收货地址"
+      }
+    },
+    "packageLocation/address/location/location.html": {
+      "window": {
+        "navigationBarTitleText": "搜索地址",
+        "componentPlaceholder": {
+          "store-map": "view"
+        }
+      }
+    },
+    "packageLocation/storelist/storelist.html": {
+      "window": {
+        "navigationBarTitleText": "选择门店"
+      }
+    },
+    "packageLocation/address/citylist/citylist.html": {
+      "window": {
+        "navigationBarTitleText": "选择城市"
+      }
+    },
+    "packageLocation/address/addresslist/addresslist.html": {
+      "window": {
+        "navigationBarTitleText": "收货地址管理"
+      }
+    },
+    "packageLocation/address/orderAddress/orderAddress.html": {
+      "window": {
+        "navigationBarTitleText": "选择收货地址"
+      }
+    },
+    "packageLocation/c9ChooseStore/storeList.html": {
+      "window": {
+        "navigationBarTitleText": "选择区域"
+      }
+    },
+    "packageLocation/couponStoreList/couponStoreList.html": {
+      "window": {
+        "navigationBarTitleText": "门店列表"
+      }
+    },
+    "packageQiyu/pages/chat/chat.html": {
+      "window": {}
+    },
+    "packagePersonal/payprocess/payprocess.html": {
+      "window": {}
+    },
+    "packagePersonal/payresult/payresult.html": {
+      "window": {}
+    },
+    "packagePersonal/orderdetail/orderdetail.html": {
+      "window": {}
+    },
+    "packagePersonal/orderlist/orderlist.html": {
+      "window": {}
+    },
+    "packagePersonal/login/login.html": {
+      "window": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    "packagePersonal/register/register.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packagePersonal/phoneLogin/phoneLogin.html": {
+      "window": {
+        "navigationBarTitleText": "验证码登录"
+      }
+    },
+    "packagePersonal/coupon/coupon.html": {
+      "window": {}
+    },
+    "packagePersonal/realname/realname.html": {
+      "window": {
+        "navigationBarTitleText": "实名认证",
+        "disableScroll": true,
+        "enablePullDownRefresh": false
+      }
+    },
+    "packagePersonal/vip/vip.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "会员",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    "packagePersonal/vip/payCode/storePayCode/storePayCode.html": {
+      "window": {}
+    },
+    "packagePersonal/vip/payCode/payConfig/payConfig.html": {
+      "window": {
+        "navigationBarTitleText": "支付设置"
+      }
+    },
+    "packagePersonal/vip/payCode/modifyPayCode/modifyPayCode.html": {
+      "window": {
+        "navigationBarTitleText": "修改支付密码"
+      }
+    },
+    "packagePersonal/vip/payCode/setPayCode/setPayCode.html": {
+      "window": {
+        "navigationBarTitleText": "设置支付密码"
+      }
+    },
+    "packagePersonal/vip/payCode/phoneValid/phoneValid.html": {
+      "window": {
+        "navigationBarTitleText": "手机验证"
+      }
+    },
+    "packagePersonal/shareFriend/shareFriend.html": {
+      "window": {
+        "navigationBarTitleText": "分享给好友"
+      }
+    },
+    "packagePersonal/personal/personal.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "账户信息"
+      }
+    },
+    "packagePersonal/userInfo/userInfo.html": {
+      "window": {
+        "enablePullDownRefresh": false
+      }
+    },
+    "packagePersonal/editpersonal/editpersonal.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "修改姓名"
+      }
+    },
+    "packagePersonal/editPhone/editPhone.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "修改手机号码"
+      }
+    },
+    "packagePersonal/editIdentityCard/editIdentityCard.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "修改证件号码"
+      }
+    },
+    "packagePersonal/editEmail/editEmail.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "修改邮箱"
+      }
+    },
+    "packagePersonal/editIDcard/editIDcard.html": {
+      "window": {
+        "disableScroll": true,
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "会员信息"
+      }
+    },
+    "packagePersonal/pdlRealname/pdlRealname.html": {
+      "window": {
+        "navigationBarTitleText": "实名认证",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packagePersonal/guardianRealname/guardianRealname.html": {
+      "window": {
+        "navigationBarTitleText": "监护人认证",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packagePersonal/pdlEvaluate/pdlEvaluate.html": {
+      "window": {
+        "backgroundColor": "#999999",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "消费评价"
+      }
+    },
+    "packagePersonal/account/accountManage/accountManage.html": {
+      "window": {
+        "navigationBarTitleText": "账号管理"
+      }
+    },
+    "packagePersonal/account/accountSignout/accountSignout.html": {
+      "window": {
+        "navigationBarTitleText": "注销账号"
+      }
+    },
+    "packagePersonal/account/accountSafe/accountSafe.html": {
+      "window": {
+        "navigationBarTitleText": "检查账号安全"
+      }
+    },
+    "packagePersonal/account/accountAssets/accountAssets.html": {
+      "window": {
+        "navigationBarTitleText": "账号资产确认"
+      }
+    },
+    "packagePersonal/account/signoutReason/signoutReason.html": {
+      "window": {
+        "navigationBarTitleText": "选择注销原因"
+      }
+    },
+    "packagePersonal/account/signoutResult/signoutResult.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "账号注销结果"
+      }
+    },
+    "packagePersonal/editorder/editorder.html": {
+      "window": {
+        "navigationBarTitleText": "修改订单"
+      }
+    },
+    "packagePersonal/feedback/feedback.html": {
+      "window": {
+        "navigationBarTitleText": "意见反馈"
+      }
+    },
+    "packagePersonal/feedbackList/feedbackList.html": {
+      "window": {
+        "navigationBarTitleText": "我的反馈"
+      }
+    },
+    "packageWare/couponPromotion/couponPromotion.html": {
+      "window": {}
+    },
+    "packageWare/promoteSales/promoteSales.html": {
+      "window": {}
+    },
+    "packageWare/cmsTemplate/cmsTemplate.html": {
+      "window": {
+        "componentPlaceholder": {
+          "c-m-s": "view",
+          "mini-cart": "view"
+        }
+      }
+    },
+    "packageWare/suitGroup/suitGroup.html": {
+      "window": {
+        "navigationBarTitleText": "优惠套装",
+        "onReachBottomDistance": 300
+      }
+    },
+    "packageWare/wareSuitGroup/wareSuitGroup.html": {
+      "window": {
+        "navigationBarTitleText": "优惠套装",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageWare/itemdetail/itemdetail.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "ware-item": "view",
+          "share-dialog": "view",
+          "store-choose-popup": "view"
+        }
+      }
+    },
+    "packageWare/comboDetail/comboDetail.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "componentPlaceholder": {
+          "store-choose-popup": "view"
+        }
+      }
+    },
+    "packageActive/maotai/list/list.html": {
+      "window": {
+        "navigationBarTitleText": "茅台预购"
+      }
+    },
+    "packageActive/maotai/book/book.html": {
+      "window": {
+        "navigationBarTitleText": "预约下单"
+      }
+    },
+    "packageActive/maotai/storeList/storeList.html": {
+      "window": {
+        "navigationBarTitleText": "选择门店"
+      }
+    },
+    "packageActive/maotai/buyExplain/buyExplain.html": {
+      "window": {
+        "navigationBarTitleText": "购买说明"
+      }
+    },
+    "packageActive/maotai/home/home.html": {
+      "window": {
+        "navigationBarTitleText": "茅台预约抢购"
+      }
+    },
+    "packageActive/maotai/register/register.html": {
+      "window": {
+        "navigationBarTitleText": "预约抽签"
+      }
+    },
+    "packageActive/maotai/luckylist/luckylist.html": {
+      "window": {
+        "navigationBarTitleText": "中签会员公示"
+      }
+    },
+    "packageActive/maotai/qualification/qualification.html": {
+      "window": {
+        "navigationBarTitleText": "资格查询"
+      }
+    },
+    "packageActive/maotai/extraDesc/extraDesc.html": {
+      "window": {
+        "navigationBarTitleText": "额外资格说明"
+      }
+    },
+    "packageActive/maotai/winList/winList.html": {
+      "window": {
+        "navigationBarTitleText": "购买会员公示"
+      }
+    },
+    "packageActive/maotai/publicity/publicity.html": {
+      "window": {
+        "navigationBarTitleText": "投放量公示"
+      }
+    },
+    "packageActive/signIn/signIn.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "onReachBottomDistance": 200,
+        "componentPlaceholder": {
+          "two-items": "view"
+        }
+      }
+    },
+    "packageActive/signwebview/signwebview.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageActive/cmsTemplate/cmsTemplate.html": {
+      "window": {}
+    },
+    "packageActive/subscribeInterim/subscribeInterim.html": {
+      "window": {}
+    },
+    "packageActive/present/presentCoupon.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "dark"
+      }
+    },
+    "packageGroup/invalidgroup/invalidgroup.html": {
+      "window": {}
+    },
+    "packageGroup/selectguider/selectguider.html": {
+      "window": {}
+    },
+    "packageGroup/guiderlist/guiderlist.html": {
+      "window": {}
+    },
+    "packageGroup/applyguider/applyguider.html": {
+      "window": {}
+    },
+    "packageGroup/applyguiderinfo/applyguiderinfo.html": {
+      "window": {}
+    },
+    "packageSubBusi/subHome/subHome.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    "packageSubBusi/categorySub/categorySub.html": {
+      "window": {
+        "navigationBarTitleText": "分类",
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "search-inner": "view"
+        }
+      }
+    },
+    "packageSubBusi/bldSub/categorySub/categorySub.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "search-inner": "view",
+          "store-choose-popup": "view"
+        }
+      }
+    },
+    "packageSubBusi/mineSub/mineSub.html": {
+      "window": {}
+    },
+    "packageSubBusi/cartSub/cartSub.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "disableScroll": false,
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark"
+      }
+    },
+    "packageSubBusi/bldSub/storeList/storeList.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "componentPlaceholder": {
+          "search-header": "view"
+        }
+      }
+    },
+    "packageSubBusi/bldSub/deliverySelection/deliverySelection.html": {
+      "window": {}
+    },
+    "packageBaseComp/base_holder/base_holder.html": {
+      "window": {}
+    },
+    "packageCmsComp/cms_holder/cms_holder.html": {
+      "window": {}
+    },
+    "packageWebview/webview/webview.html": {
+      "window": {}
+    },
+    "packageWebview/dshop/dshop.html": {
+      "window": {}
+    },
+    "packageGLeader/ordermanage/ordermanage.html": {
+      "window": {
+        "navigationBarTitleText": "订单管理"
+      }
+    },
+    "packageGLeader/individualcenter/userlist/userlist.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "用户列表",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "light"
+      }
+    },
+    "packageGLeader/individualcenter/index/index.html": {
+      "window": {}
+    },
+    "packageGLeader/individualcenter/userinfo/userinfo.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "团长信息",
+        "backgroundColor": "#F5F5F5",
+        "backgroundTextStyle": "light"
+      }
+    },
+    "packageGLeader/individualcenter/accountlist/accountlist.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "账户明细",
+        "backgroundColor": "#F5F5F5",
+        "backgroundTextStyle": "light"
+      }
+    },
+    "packageGLeader/individualcenter/accountdetails/accountdetails.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "账户详情",
+        "backgroundColor": "#F5F5F5",
+        "backgroundTextStyle": "light"
+      }
+    },
+    "packageGLeader/individualcenter/myBalance/myBalance.html": {
+      "window": {
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageGLeader/individualcenter/withdraw/withdraw.html": {
+      "window": {}
+    },
+    "packageGLeader/individualcenter/withdrawInfo/withdrawInfo.html": {
+      "window": {
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageGLeader/auth/auth.html": {
+      "window": {
+        "navigationBarTitleText": "多点团长",
+        "disableScroll": true
+      }
+    },
+    "packageGLeader/orderdetail/orderdetail.html": {
+      "window": {
+        "navigationBarTitleText": "订单详情",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageGLeader/afterSaleDetail/afterSaleDetail.html": {
+      "window": {
+        "navigationBarTitleText": "售后详情"
+      }
+    },
+    "packageGLeader/abnormal/abnormal.html": {
+      "window": {
+        "navigationBarTitleText": "异常说明"
+      }
+    },
+    "packageGLeader/individualcenter/termservice/termservice.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "服务条款",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "light",
+        "disableScroll": true
+      }
+    },
+    "packageGLeader/individualcenter/commissionlist/commissionlist.html": {
+      "window": {}
+    },
+    "packageGLeader/individualcenter/commissiondesc/commissiondesc.html": {
+      "window": {}
+    },
+    "packageGLeader/individualcenter/commissiondetail/commissiondetail.html": {
+      "window": {}
+    },
+    "packageGLeader/authManage/authManage.html": {
+      "window": {
+        "navigationBarTitleText": "授权管理"
+      }
+    },
+    "packageGLeader/applyForAuth/applyForAuth.html": {
+      "window": {
+        "navigationBarTitleText": "申请授权"
+      }
+    },
+    "packageGLeader/expressDetail/expressDetail.html": {
+      "window": {
+        "navigationBarTitleText": "快递详情"
+      }
+    },
+    "packageGLeader/invite/invite.html": {
+      "window": {
+        "navigationBarTitleText": "邀请有奖"
+      }
+    },
+    "packageGLeader/groupBuy/activity.html": {
+      "window": {
+        "navigationBarTitleText": "团长活动"
+      }
+    },
+    "packageGLeader/salesDetail/salesDetail.html": {
+      "window": {
+        "navigationBarTitleText": "销售明细"
+      }
+    },
+    "packageTools/envGroup/envGroup.html": {
+      "window": {}
+    },
+    "packageTools/defend/defend.html": {
+      "window": {}
+    },
+    "packageTools/privacy/privacy.html": {
+      "window": {
+        "disableScroll": false
+      }
+    },
+    "packageTools/customPrivacy/customPrivacy.html": {
+      "window": {
+        "disableScroll": false
+      }
+    },
+    "packageTools/workBench/verifyHome/verifyHome.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageTools/workBench/verifyPage/verifyPage.html": {
+      "window": {
+        "navigationBarTitleText": "核销",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageTools/workBench/verifyResult/verifyResult.html": {
+      "window": {
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageTools/workBench/searchPage/searchPage.html": {
+      "window": {
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageTools/workBench/flowRecords/flowRecords.html": {
+      "window": {
+        "navigationBarTitleText": "充值流水记录",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageTools/workBench/couponRecords/couponRecords.html": {
+      "window": {
+        "navigationBarTitleText": "优惠券查询",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageTools/workBench/expendRefund/expendRefund.html": {
+      "window": {
+        "navigationBarTitleText": "消费退款",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageRec/search/search.html": {
+      "window": {
+        "navigationBarTitleText": "搜索",
+        "disableScroll": true,
+        "componentPlaceholder": {
+          "mini-cart": "view"
+        }
+      }
+    },
+    "packageRec/wareRank/wareRank.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "",
+        "componentPlaceholder": {
+          "ware-item": "view"
+        }
+      }
+    },
+    "packageRec/wareRank/rankingRule.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageRec/seckill/seckill.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false,
+        "disableScroll": true
+      }
+    },
+    "packageRec/couponPromotion/couponPromotion.html": {
+      "window": {
+        "navigationBarTitleText": "优惠券专享",
+        "componentPlaceholder": {
+          "ware-item-list": "view",
+          "mini-cart": "view"
+        }
+      }
+    },
+    "packageRec/promoteSales/promoteSales.html": {
+      "window": {
+        "componentPlaceholder": {
+          "ware-item-list": "view",
+          "mini-cart": "view",
+          "icon-sort": "view"
+        }
+      }
+    },
+    "packageMarket/userInfoGift/userInfoGift.html": {
+      "window": {
+        "navigationBarTitleText": "个人信息"
+      }
+    },
+    "packageMarket/spellgroup/groupactivity/groupactivity.html": {
+      "window": {
+        "navigationBarTitleText": "限时拼团"
+      }
+    },
+    "packageMarket/spellgroup/groupActivityDetail/groupActivityDetail.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/spellgroup/groupBuying/groupBuying.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/spellgroup/storelist/storelist.html": {
+      "window": {
+        "navigationBarTitleText": "选择门店"
+      }
+    },
+    "packageMarket/spellgroup/groupRecord/groupRecord.html": {
+      "window": {
+        "navigationBarTitleText": "拼团记录"
+      }
+    },
+    "packageMarket/spellgroup/checkorder/checkorder.html": {
+      "window": {
+        "navigationBarTitleText": "确认订单"
+      }
+    },
+    "packageMarket/printing/index/index.html": {
+      "window": {}
+    },
+    "packageMarket/printing/rewardInfo/rewardInfo.html": {
+      "window": {}
+    },
+    "packageMarket/vote/voteIndex/voteIndex.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "backgroundColor": "#F3F3F3",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+      }
+    },
+    "packageMarket/vote/voteApply/voteApply.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "backgroundColor": "#F3F3F3",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageMarket/vote/voteWork/voteWork.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "backgroundColor": "#F3F3F3",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageMarket/vote/voteRank/voteRank.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#0187F6",
+        "navigationBarTitleText": "",
+        "backgroundColor": "#F3F3F3",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    "packageMarket/newSignIn/newSignIn.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/newSignIn/reSignDetail/reSignDetail.html": {
+      "window": {
+        "navigationBarTitleText": "补签卡兑换"
+      }
+    },
+    "packageMarket/newSignIn/reSignRecord/reSignRecord.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/exchange/exchange.html": {
+      "window": {
+        "navigationBarTitleText": "兑换中心",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#F5F5F5"
+      }
+    },
+    "packageMarket/bargain/bargainDetail.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageMarket/bargain/bargainList.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageMarket/bargain/cutRecord.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageMarket/bargain/helpCut.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageMarket/bargain/awardPage.html": {
+      "window": {
+        "navigationBarTitleText": ""
+      }
+    },
+    "packageMarket/pointMarket/home/home.html": {
+      "window": {}
+    },
+    "packageMarket/pointMarket/wareDetail/wareDetail.html": {
+      "window": {}
+    },
+    "packageMarket/pointMarket/more/more.html": {
+      "window": {}
+    },
+    "packageMarket/pointMarket/orderConfirm/orderConfirm.html": {
+      "window": {}
+    },
+    "packageMarket/pointMarket/orderList/orderList.html": {
+      "window": {}
+    },
+    "packageMarket/pointMarket/orderDetail/orderDetail.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/pointIntegral/home/home.html": {
+      "window": {
+        "navigationBarTitleText": "积分商城",
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/pointIntegral/productDetail/productDetail.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/pointIntegral/floorProducts/floorProducts.html": {
+      "window": {
+        "navigationBarTitleText": "商品列表"
+      }
+    },
+    "packageMarket/pointIntegral/exchangeRecord/exchangeRecord.html": {
+      "window": {
+        "navigationBarTitleText": "兑换记录"
+      }
+    },
+    "packageMarket/pointIntegral/exchangeResult/exchangeResult.html": {
+      "window": {
+        "navigationBarTitleText": "兑换结果"
+      }
+    },
+    "packageMarket/pointIntegral/recordDetail/recordDetail.html": {
+      "window": {
+        "navigationBarTitleText": "记录详情",
+        "navigationStyle": "custom"
+      }
+    },
+    "packageMarket/invitationGift/invitationGift.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    "packageMarket/giftReward/giftReward.html": {
+      "window": {
+        "navigationBarTitleText": "我的奖励"
+      }
+    },
+    "packageMarket/distribution/home/home.html": {
+      "window": {
+        "navigationBarTitleText": "分享下单赢现金"
+      }
+    },
+    "packageMarket/distribution/activeList/activeList.html": {
+      "window": {
+        "navigationBarTitleText": "分享赚钱"
+      }
+    },
+    "packageMarket/distribution/activeDetail/activeDetail.html": {
+      "window": {
+        "navigationBarTitleText": "活动详情"
+      }
+    },
+    "packageMarket/distribution/orderList/orderList.html": {
+      "window": {
+        "navigationBarTitleText": "推广订单",
+        "disableScroll": true
+      }
+    },
+    "packageMarket/distribution/commission/commission.html": {
+      "window": {
+        "navigationBarTitleText": "我的佣金",
+        "disableScroll": true
+      }
+    },
+    "packageMarket/distribution/withdrawDetail/withdrawDetail.html": {
+      "window": {
+        "navigationBarTitleText": "提现详情"
+      }
+    },
+    "packageMarket/distribution/withdrawSetting/withdrawSetting.html": {
+      "window": {
+        "navigationBarTitleText": "提现信息设置"
+      }
+    },
+    "packageTrade/cashier/cashier.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageTrade/password/password.html": {
+      "window": {
+        "enablePullDownRefresh": false
+      }
+    },
+    "packageTrade/payprocess/payprocess.html": {
+      "window": {}
+    },
+    "packageTrade/payresult/payresult.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageTrade/checkorder/checkorder.html": {
+      "window": {
+        "navigationBarTitleText": "确认订单",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    "packageTrade/checkorder/invoice/invoice.html": {
+      "window": {}
+    },
+    "packageTrade/orderRemark/orderRemark.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packageTrade/invoiceCenter/home/home.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心",
+        "disableScroll": false
+      }
+    },
+    "packageTrade/invoiceCenter/c9Home/c9Home.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageTrade/invoiceCenter/detail/detail.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageTrade/invoiceCenter/orderList/orderList.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageTrade/invoiceCenter/getInvoice/getInvoice.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageTrade/invoiceCenter/infoInput/infoInput.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageTrade/invoiceCenter/electronicInvoice/electronicInvoice.html": {
+      "window": {
+        "navigationBarTitleText": "发票中心"
+      }
+    },
+    "packageAssets/premiumMember/premiumMember.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "c-m-s": "view"
+        }
+      }
+    },
+    "packageAssets/vipBuyRecord/vipBuyRecord.html": {
+      "window": {
+        "navigationBarTitleText": "购买记录"
+      }
+    },
+    "packageAssets/benefits/list.html": {
+      "window": {
+        "navigationBarTitleText": "会员权益"
+      }
+    },
+    "packageAssets/benefits/detail.html": {
+      "window": {
+        "navigationBarTitleText": "会员权益"
+      }
+    },
+    "packageAssets/bonusPoint/bonusPoint.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "会员积分"
+      }
+    },
+    "packageAssets/bonusPoint/sbybPoint.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "会员积分"
+      }
+    },
+    "packageAssets/costDetail/costDetail.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 100,
+        "navigationStyle": "custom"
+      }
+    },
+    "packageAssets/discount/discount.html": {
+      "window": {
+        "navigationBarTitleText": "消费记录"
+      }
+    },
+    "packageAssets/superValueCard/myCardList/myCardList.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/myCardDetail/myCardDetail.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/cardList/cardList.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/cardDetail/cardDetail.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/gift/gift.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#FFF5F5",
+        "backgroundColor": "#FFF5F5"
+      }
+    },
+    "packageAssets/superValueCard/useRecord/useRecord.html": {
+      "window": {
+        "navigationBarTitleText": "使用记录",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/storeList/storeList.html": {
+      "window": {
+        "navigationBarTitleText": "附近门店",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/selectCity/selectCity.html": {
+      "window": {
+        "navigationBarTitleText": "选择城市",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/selectAddress/selectAddress.html": {
+      "window": {
+        "navigationBarTitleText": "选择地址",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/superValueCard/selectStore/selectStore.html": {
+      "window": {
+        "navigationBarTitleText": "选择门店",
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/growthValue/growthValue.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 100,
+        "navigationStyle": "custom"
+      }
+    },
+    "packageAssets/giftCard/giftCard.html": {
+      "window": {
+        "navigationBarTitleText": "电子卡"
+      }
+    },
+    "packageAssets/giftCoupon/giftCoupon.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "提货券",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/coupon/coupon.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "我的优惠券",
+        "backgroundColor": "#F5F5F5",
+        "componentPlaceholder": {
+          "coupon-online": "view",
+          "coupon-offline": "view",
+          "notification-coupon": "view"
+        }
+      }
+    },
+    "packageAssets/coupon/couponUsedRecord/couponUsedRecord.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "优惠券使用记录",
+        "backgroundColor": "#F5F5F5",
+        "componentPlaceholder": {
+          "coupon-online": "view",
+          "coupon-offline": "view",
+          "notification-coupon": "view"
+        }
+      }
+    },
+    "packageAssets/coupon/settlementCouponOnline/settlementCouponOnline.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "优惠券",
+        "backgroundColor": "#F5F5F5",
+        "componentPlaceholder": {
+          "coupon-online": "view"
+        }
+      }
+    },
+    "packageAssets/coupon/settlementCouponOffline/settlementCouponOffline.html": {
+      "window": {
+        "componentPlaceholder": {
+          "coupon-online": "view"
+        }
+      }
+    },
+    "packageAssets/coupon/skylCoupon/skylCoupon.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "我的优惠券",
+        "backgroundColor": "#F5F5F5",
+        "componentPlaceholder": {
+          "coupon-online": "view"
+        }
+      }
+    },
+    "packageAssets/coupon/threePartyCoupon/threePartyCoupon.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "我的优惠券",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageAssets/couponCode/couponCode.html": {
+      "window": {
+        "disableScroll": true,
+        "navigationBarTitleText": "我的优惠码",
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "packageOrder/logisticDetail/logisticDetail.html": {
+      "window": {
+        "navigationBarTitleText": "物流信息"
+      }
+    },
+    "packageOrder/qrbarcode/qrbarcode.html": {
+      "window": {}
+    },
+    "packageOrder/orderdetail/orderdetail.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packageOrder/orderlist/orderlist.html": {
+      "window": {
+        "navigationBarTitleText": "我的订单",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packageOrder/ordersearch/ordersearch.html": {
+      "window": {
+        "navigationBarTitleText": "订单搜索",
+        "enablePullDownRefresh": false
+      }
+    },
+    "packageOrder/orderlistSub/orderlistSub.html": {
+      "window": {
+        "navigationBarTitleText": "订单列表",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "disableScroll": true
+      }
+    },
+    "packageOrder/orderevaluate/evaluate/evaluate.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTitleText": "订单评价"
+      }
+    },
+    "packageOrder/orderevaluate/evaluateResult/evaluateResult.html": {
+      "window": {}
+    },
+    "packageOrder/orderevaluate/evaluateDetail/evaluateDetail.html": {
+      "window": {
+        "navigationBarBackgroundColor": "#F5F5F5",
+        "backgroundColor": "#F5F5F5",
+        "navigationBarTitleText": "我的评价"
+      }
+    },
+    "packageOffline/checkout/checkout.html": {
+      "window": {
+        "navigationBarTitleText": "确认订单",
+        "navigationBarTextStyle": "white",
+        "componentPlaceholder": {
+          "balance-pay": "view"
+        }
+      }
+    },
+    "packageOffline/shopcart/shopcart.html": {
+      "window": {}
+    },
+    "packageOffline/shopcart/storeList/storeList.html": {
+      "window": {}
+    },
+    "packageExternal/index/index.html": {
+      "window": {
+        "navigationBarTitleText": "在线预约"
+      }
+    },
+    "packageExternal/reservationhome/reservationhome.html": {
+      "window": {
+        "navigationBarTitleText": "全部预约"
+      }
+    },
+    "packageExternal/reservationlist/reservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "预约列表"
+      }
+    },
+    "packageExternal/reservationinfo/reservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/myreservationlist/myreservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "我的预约"
+      }
+    },
+    "packageExternal/myreservationinfo/myreservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/myreservationhistorylist/myreservationhistorylist.html": {
+      "window": {
+        "navigationBarTitleText": "预约历史"
+      }
+    },
+    "packageExternal/reservationresult/reservationresult.html": {
+      "window": {
+        "navigationBarTitleText": "预约结果"
+      }
+    },
+    "packageExternal/rulescenter/rulescenter.html": {
+      "window": {
+        "navigationBarTitleText": "预约规则说明"
+      }
+    },
+    "packageExternal/moduleHome/index.html": {
+      "window": {
+        "navigationBarTitleText": "在线预约"
+      }
+    },
+    "packageExternal/moduleTea/index/index.html": {
+      "window": {
+        "navigationBarTitleText": "在线预约",
+        "navigationBarBackgroundColor": "#3E3E3F"
+      }
+    },
+    "packageExternal/moduleTea/reservationhome/reservationhome.html": {
+      "window": {
+        "navigationBarTitleText": "全部预约"
+      }
+    },
+    "packageExternal/moduleTea/reservationlist/reservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "预约列表"
+      }
+    },
+    "packageExternal/moduleTea/reservationinfo/reservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/moduleTea/myreservationlist/myreservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "我的预约"
+      }
+    },
+    "packageExternal/moduleTea/myreservationinfo/myreservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/moduleTea/myreservationhistorylist/myreservationhistorylist.html": {
+      "window": {
+        "navigationBarTitleText": "预约历史"
+      }
+    },
+    "packageExternal/moduleTea/reservationresult/reservationresult.html": {
+      "window": {
+        "navigationBarTitleText": "预约结果"
+      }
+    },
+    "packageExternal/moduleTea/rulescenter/rulescenter.html": {
+      "window": {
+        "navigationBarTitleText": "预约规则说明"
+      }
+    },
+    "packageExternal/moduleMarket/index/index.html": {
+      "window": {
+        "navigationBarTitleText": "在线预约",
+        "navigationBarBackgroundColor": "#3E3E3F"
+      }
+    },
+    "packageExternal/moduleMarket/reservationhome/reservationhome.html": {
+      "window": {
+        "navigationBarTitleText": "全部预约"
+      }
+    },
+    "packageExternal/moduleMarket/companion/companion.html": {
+      "window": {
+        "navigationBarTitleText": "随行人员管理"
+      }
+    },
+    "packageExternal/moduleMarket/reservationlist/reservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "预约列表"
+      }
+    },
+    "packageExternal/moduleMarket/reservationinfo/reservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/moduleMarket/myreservationlist/myreservationlist.html": {
+      "window": {
+        "navigationBarTitleText": "我的预约"
+      }
+    },
+    "packageExternal/moduleMarket/myreservationinfo/myreservationinfo.html": {
+      "window": {
+        "navigationBarTitleText": "预约信息"
+      }
+    },
+    "packageExternal/moduleMarket/myreservationhistorylist/myreservationhistorylist.html": {
+      "window": {
+        "navigationBarTitleText": "预约历史"
+      }
+    },
+    "packageExternal/moduleMarket/reservationresult/reservationresult.html": {
+      "window": {
+        "navigationBarTitleText": "预约结果"
+      }
+    },
+    "packageExternal/moduleMarket/rulescenter/rulescenter.html": {
+      "window": {
+        "navigationBarTitleText": "预约规则说明"
+      }
+    },
+    "packageExternal/reservationindex/reservationindex.html": {
+      "window": {
+        "navigationBarTitleText": "在线预约",
+        "navigationBarBackgroundColor": "#3E3E3F"
+      }
+    },
+    "packageExternal/modelEmployee/employeelogin/employeelogin.html": {
+      "window": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    "packageExternal/modelEmployee/employee/employee.html": {
+      "window": {
+        "navigationBarTitleText": "员工管理"
+      }
+    },
+    "packageExternal/modelEmployee/scancode/scancode.html": {
+      "window": {
+        "navigationBarTitleText": "扫码核验"
+      }
+    },
+    "packageExternal/modelEmployee/writeoffnotes/writeoffnotes.html": {
+      "window": {
+        "navigationBarTitleText": "入场核验"
+      }
+    },
+    "packageExternal/modelEmployee/addrule/addrule.html": {
+      "window": {
+        "navigationBarTitleText": "添加规则"
+      }
+    },
+    "packageDStore/parkHome/parkHome.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    "packageDStore/storeList/storeList.html": {
+      "window": {
+        "navigationBarTitleText": "选择门店"
+      }
+    },
+    "packageDStore/orderList/orderList.html": {
+      "window": {
+        "navigationBarTitleText": "停车订单"
+      }
+    },
+    "packageDStore/orderDetail/orderDetail.html": {
+      "window": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    "packageDStore/checkOrder/checkOrder.html": {
+      "window": {
+        "navigationBarTitleText": "确认订单",
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark"
+      }
+    },
+    "packageDStore/coupon/coupon.html": {
+      "window": {
+        "navigationBarTitleText": "停车券"
+      }
+    },
+    "packageDStore/addPlate/addPlate.html": {
+      "window": {
+        "navigationBarTitleText": "添加车牌"
+      }
+    },
+    "packageDStore/parking/parking.html": {
+      "window": {
+        "navigationBarTitleText": "临时停车"
+      }
+    },
+    "packageAgents/_holder/index.html": {
+      "window": {}
+    },
+    "packageAgentDetail/address/addresslist/addresslist.html": {
+      "window": {
+        "navigationStyle": "custom",
+        "componentPlaceholder": {
+          "region-select-popup": "view"
+        }
+      }
+    },
+    "packageAgentDetail/store/storelist/storelist.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageAgentDetail/wareList/wareList.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom"
+      }
+    },
+    "packageAgentDetail/cart/cart.html": {
+      "window": {
+        "navigationStyle": "custom"
+      }
+    },
+    "packageAgentDetail/checkorder/checkorder.html": {
+      "window": {}
+    },
+    "__plugin__/wxfe70b3f986aad2fb/pages/challenge/index.html": {
+      "window": {
+        "renderer": "webview",
+        "navigationStyle": "default"
+      }
+    },
+    "packageQiyu/__plugin__/wxae5e29812005203f/pages/chat/chat.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "styleIsolation": "page-apply-shared",
+        "disableScroll": true,
+        "renderer": "webview",
+        "isNewBlended": false,
+        "__warning__": "invalid page.json [\"styleIsolation\"]、page.json [\"isNewBlended\"]"
+      }
+    }
+  },
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "global": {
+    "window": {
+      "navigationBarTextStyle": "black",
+      "navigationBarTitleText": "",
+      "navigationBarBackgroundColor": "#FFFFFF",
+      "backgroundColor": "#FFFFFF"
+    }
+  },
+  "plugins": {
+    "gateway-challenge": {
+      "version": "1.4.1",
+      "provider": "wxfe70b3f986aad2fb",
+      "subpackage": "__APP__"
+    },
+    "captcha": {
+      "version": "2.1.4",
+      "provider": "wx1fe8d9a3cb067a75",
+      "subpackage": "__APP__"
+    },
+    "qiyu-plugin": {
+      "version": "2.12.0",
+      "provider": "wxae5e29812005203f",
+      "appIds": [
+        "wx2033b55ba0eaf5f2",
+        "wx78703c746eccb0d0",
+        "wxa9dd5762b2ba65d6",
+        "wx9572d0552dfc7579",
+        "wx441e80287946d7b6",
+        "wxc94daee5c5b654ad",
+        "wx4d0b88c307eeaf34"
+      ],
+      "subpackage": "/packageQiyu/"
+    }
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#666666",
+    "selectedColor": "#313232",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage.html",
+        "text": "首页",
+        "iconData": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAb1BMVEX///+ampqenp6cnJz09PSqqqr6+vqgoKD8/Pzv7++tra2mpqbr6+u4uLjb29uxsbHl5eXX19eioqLDw8P29vbh4eHQ0NC/v7+kpKTf39/U1NTLy8v4+PjS0tK8vLzs7OzHx8fo6Oi1tbXx8fHExMRVTty4AAACp0lEQVRo3u3Za3OqMBAG4F3IhZsF5CKg1rb2///G0+mi9GBmlMXkzOnk+ajia0IuawDP8zzP87z/SVwUMTin2hS/pK0Cp2KJI+m01YXGK12AMy8h/hC+gCMtzrTgxCeO8hxHn2Cf2kw9PPX5RoFldY5Ev8OXd40kr8Gqs0SSxuO8SpHIM1iUbZEkAkYiQbLNwJomQPKh4Ep9IAkasKQMkewi+CHaIQlLsGKPo/2dd56J2kUM7SrR2Bd8pjvZg0E/u/urmcfu/fG+3my2pjHjI2zT+pTUQAzqZFrTnqSfVuTHVvEenmLAUQV3VDga4AnecNQu2KnfYK3oddoFl9QmrxGscsiRBAU8pAiQ5AdYQUgk3QkedOqQSAFs8fQlnB/LntCZnrqNc3t0xmzvdhoovAG5ZbU5kpepwZ+CkjO2j0iO4PZipafpy/+zoRUs1eM3yuUk0/U9LLWjbQHYaMvYwVK0yTXA1tBGCkvRXKqBraYZBUvhN5gwv8EH+2AffOeyqNklHYZpvj+5DI5ajVeydxacSfzLRrgJfg9wJj27CM4CvJEK+8EqRYPcfvAbks3LOVLxkCBpbQeLsaTpYXSkF4KD5eA9VWLFTY3TWg7e3la8OxpfdoMzQ7/W1Nknq8ED/bUwlXWD1eBX00lXSb/GanBu6tUT1ZNWg6Wp9qxpdFkNpkEdzTYrGnFWg2mdNn/2FweHPvjXBwc+2FWwdh9MS2YHM9p+cIJfcuOrHTPYvDgq08HZADOl6XxHXbaOhWgDzGBmL+UebhyT4ONgrJIk85iqAraKc1A2PbUrgKm4PA9cZKrcu4KZ21EBLjhdRapMwUIqu14MywmNq2kBDA2u1gDLgCsNwNRoXEE3wCaqEJnCSsAaotzIABcK5KYU4Hme53me5/1rfwAC+xxhem54cAAAAABJRU5ErkJggg==",
+        "selectedIconData": "iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ/SURBVHgB7Zy/UxNREMe/FyxsmElpqBgLKU1C/oDTygL80QmN2EiJM1jYQWkBA6XQiBZQwgw2VsTOgpC00JCK2IlDn+du5uKEECQJe+82cT8zDMnNwSSf7O197717AQzDMAzDMAzDMAzDMAzD0EmAASCbzaZTqdSCC4IQzmVpU5p+KvR8vVIqfcYAoF40SR4PUqkDejh+zS5VV68/qlQqVSgmBcWQ5OwNkpnGB8EfCBSjVnS2UAi7kNyEZZdJdgiljEAhk5OTr6gX79HDuz382d0gCObuZTK/f9ZqP6AMdaLz+fySA9bRJ3TSeTKWyaBWq32HIlSJJslrJPk9bk+oTbaK1BHFN5Y8B0Hoze3V6/XXlEjOkTCJi47i2y4/RBw4V3HOvUg6/iUquouMLEXiWTuxeNdlRpaimbXjOWq6IBHRHN88Sm7SlP0cCeA9dZDkhbpzH9FbRpaCs/bLJBKJV9FRRv6A5PEe/7yJJsmfSPJb6IFlp0n2N3gg9tTBGTkYGdmlmBVCI84Vo/gXa9aOVXTsGVmO2ONfbKI9ZmQpYpUdS7yLMnIZgyOZiTVri4tuychpDB7Nce1XEEa0dUTt4hSDz3nURioQQrSio0oeBtJ0YbMGQcREZ/P5OQxWT/43NOMuOTUmJpr+0TMMG6mUWK8WE+2GqZoj6AQWQgjJHq39oqQfxiGE6vs6hgkT7QkT7QkT7QkT7Yk7UM7o6ChmZ2d5DAUTDx40njMXFxc4PjnB/v4+Dksl1M7OoBmxsY5cPu8gzPz8PGZnZv7KvY4zkry9s4Pt7W1IUz46EnGksqJZ7ObmZqOCu2FsbAzvFhcbv1dWVqARlT26F8mtcPUvLy9DI+oqmttFJ8nck4vFYqNNMBMTEwjD8Mp+T6encUK9O442chtU9Wg+9L/Sya0dlrZBVc6y2/eff/MG0yS3Fd5vira1798PUj1aVeuYnpq6sm1jYwMrq6sdpXF1L1GraK/eRlKhNqIJVaLbWwGL5Eq+iU7VPlkoQBNqRHMb4L7bCvfkbmDJ7VVdoNx9Uyz0iR7RmcyVbQddimb4oqUdvsjRghrRGarodjg9dEunfTt9eEmhuqJ7SQ2d9rXW8R9ioj1hoj1hoj1hoj1hoj1hoj1hoj2hRvRZrXbp+XEPV4VNJIZF40KNaB5AahVVOjxEr/CQaiu9jJXEjeQMSxW3uFeNJc/QbDePSXM1F/uQxBO0fGTwDA0PMp30cVRcwjmxG9HFZliyudxWEATiSxKShKaMtipHR68hgFzrcG4Lw0a9vgchRNew5HK5A75THsOAc6flcvk+hBA9GTrn+DBL/Ntebo1zv+i9PIYgoqJ5MSSvZsIgy44kSy/sFI93vGSMZOfoBVcxWJBfd0A/ecllb03iXgv+nHo2fxHJQ0okGpdesNwqvcYinfi+kN8iDMMwDMMwDMMwDMMwDMMwjDj4A5Q8mnOKlmSxAAAAAElFTkSuQmCC"
+      },
+      {
+        "pagePath": "pages/category/category.html",
+        "text": "分类",
+        "iconData": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAV1BMVEUAAACioqKampqampqampqampqampqampqampqZmZmZmZmcnJyqqqqZmZmampqampqdnZ2ampqZmZmampqampqampqbm5uampqampq2traampqampqZmZkOBV4AAAAAHHRSTlMAENiQSLHm46GUZDsL88UmDb++ulFdXLaSB28apc4dlQAAAaVJREFUaN7tmOmOgjAUhW1F2VcBB6fv/5wzaQWM1txQmrYk5/vJOcm1drnLCQAAAAAA+IeNScvLkrfJyKx5afpOvND1Vrw0eSXeqPL9Xpqz0HDe6aVhN6HlxvZ4aRgXX+Bsh5dmWUOcRnVR1FEaL+vY4jXd32u2fsuu896Zemlyobg0r1+bi1Dkhl6a6svP/RGSysxL0z/X8Kk819EbeWk6tWfNp9KovetMvDRMSDKdlimNGXhpBnU39KK6KYOBlyaR/lQvplJMDLw0rfRHejGSYmvgpeHSX+vFWorcwEtTSn+hFwspllu84Qe2/VeHf7gcXCfjB2Tc4g3/ybScJI6QFq0WAscofSwWe0cpb60V9MdpYaw0bUdrU3015go2zOOFgW3yAgAAZpmYZWKWiVkmZplhtqmYZWKWiVlmqLPM2Nfh4uFfJ8uzzMzXk/nrKUm0vtLi6KkQ4L5Kn9RDsae4Tz7KWxXZdUG/RnbdwlyXyI6btuI+HzyXbSr/905z5MhZY17JUEvkh5NZZpWM6n1eI+cn50wXmRl9ED3yEwAAAABAAPwBvyzxoerSwiIAAAAASUVORK5CYII=",
+        "selectedIconData": "iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATrSURBVHgB7Zq/UxtHFMffHo3TyRVClVJQWyNqZhRX7iAFk0kVJ/8AOE0mFaJzUtl/QUhaZmK7i1PEoqMyoqGhCK6khkHp7MK3+b6TjIW40+3e7snr431mNAixt3zf09tfbx+RIAiCIAiCIAiCIAiCIAjCrUZRibRarRotLX0X4a3WuoOPapMX01dKncdEz+n9+8N+v39OJRCCBqYUR7NxURRta6Id+mhUnpD9OI73fBkbgoZplsgza2tr26TUc7x9gNcdi0dbiK7NeqMxGg4GJ+RACBpm8erodru9iwh6THbGTVNDVG02VlZoMBgcUgFC0JCGN0dPDOySHzpFDA1BQxZeHN1qtx/ixxPyS6e+svIfhvCRSeMQNMzDeTHEotNUUfQKb5vkn5GO4y+xOI0ocA15ROQIFo8ulWMgU6Mo2slrFIKGPJwiehJJ/1K5zI2oEDSY4BbRUdSh8uGIekghazDAydF4eIMWwz0KWIMJTo7W5c2L18D81qGANZjguhi2aDHUAteQi/OuY0E4GemJT+pop72lJ0LQkMvn4Wit+xS2hlzcFkOtvSVd5v4fojcUsAYT3CJaKadv2Ritn1HIGgxwc3Qc79Nihu5h0BoMcHI0H0kxpJ5SiaD//Xk3HiFoMMF9exfHnJosJ6K0Pkf/e7ntQtCQg3M+ejgcvq0vL79DBu0BeQYL3Q4iKXfIhqAhDy+Jfxh6hAS5cj2mToPhutc/PjaeEkLQMA9vV1m4hej5MjQx8PXrLlkSgoYsvF7OJoYuL79RnH9Qyv7IqvVIK/UzDHxMBQlBQxreyw0whPv1ev0F3t7FnGmW8Bkb9wt+fouh2iNHQtAwS9mVSk3iYRxFGzCgeWU0G8W7BKV6WNH5wPG7651cyBoEQRAEQRAWhxSiSyH6569hGilEL0nDLFKIXoKGNG5PIfr4yH2ESOccyEu8TvDZW0RwkzxqyMLLHM1F4OjoN/IMHPMIWbQnJm0zNYyTRU/5FiYtl5EslohgOHyXUpxuo2Ee1S5E17qPncbXJotb0odSz+hmtk8K0edqGDv5K9MdBLfj9imFMlKInqkBF6o2Tk7p75iubwmlED1NA5zcLboXTiL7ZvmCFKJnaHhBLqSXL0gh+rXfte65LlzJ8zNztRSiz2pQysuJTt/sx/6id4oqFqL7uvcbOWi4QRUL0Z0cUkI/CZUrRFdaOy1aV/0odc9CQy7VK0THyW5yrC5M8vw4d22kwYQqFqK7n+SiaJNsNJh0SS4EWoiOrdj2pHDGmuRkSLRLNhoMqGoheo0TRLZTCLfH8Zsjt2mjwYTqFqJjroazX5lG9lQGsJXS/x9bW1vkQrUL0ZWqf7ia4gpTbjf7LEdxo9H4CW33KeOkiz42Li4u/l5fXx+enp5SEbxdziLx3s2Y2wpRpD45V4NSPWz/TnDrPcJQrmnewmnNEWwyxXAG7/7q6urxwcEB2eL1FtyXs12KwD1p0Hwzgy/m7sznhZ3t9QjOzoGQ75O5tQjje71HLpX2HjRcQsOPmLbu47fLmb/yYvnP2dmZdY5HCtEnCiYafv2gAX0MMa+/xPPf4O9fTLW9g0h/NxwM/iILbnsh+uVEw0mWBj5mchTj7dU0wttJjByrQ1Gpjq4KibOV+pNvyTnfjS/phzLLx249RU+bgiAIgiAIgiAIgiAIglCI/wEWI4GL9NDhrgAAAABJRU5ErkJggg=="
+      },
+      {
+        "pagePath": "pages/o2oShopCartPage/o2oShopCartPage.html",
+        "text": "购物车",
+        "iconData": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAgVBMVEUAAADy8vKZmZmZmZmampqampqZmZmampqcnJyjo6OioqKampqampqampqZmZmampqampqbm5uenp6ampqampqampqampqampqampqcnJyampqampqampqcnJyampqampqbm5ubm5uZmZmampqampqampqampqcnJyampqampqZmZlUpp/sAAAAKnRSTlMAAvv15rzIZRgGC+zCe+CliTwRW4JVkElDH51tTyXNl2A12dSsdC8qsfEc5gS6AAADH0lEQVRo3u3Z61biMBQF4J2m95ZCAaGVi1xU8Lz/A87YIDAOQU9OYS1d/f6S1dQk+6SJ6HQ6nU6n03GTjvpLf6P95WS+w92ksy2d2c4U7qL06ZNwdIeu65wuyGvcWJnRRdkCN1Wf9+t7dOKXuKHXY7/LURkjiRendfa2A1c97/318PVgpRsyHkscLZ7J2KTgUIM3Osj6Ja4aUMOb4Zx60dSIwDGgc9s57JLMMpsL03NWg+FzKJ9j2Eyo8YD/jKjxJOmYsrVthrX96T2zvlLHoTZ0hYsezEArXDA0LzVlLS7fzye93iTXx57LK6/Yx0V9evcCF2m0IcMf2p9tWX1rUznhJhl71NjbV0OCi2J6V8DVVJN1srxrHadmkuCsMo/PbX+xD8P2q7sxNUrLL+Or6RjAXVLYFm8yLopxAotk4PuDBAIzM1spbspeoEa4O5PXAHc3pYbHQ//yimCyBo/S1JJ8AZY9tUXPwVFSa7wpOApqTRbzotyeRzAsqBErgXqszTQP+WO9gkjl8SvR07FeyyvRBAxzszAURFbmsxUMqRmlNUQifscIyGy+IhP+UOPFHLghUjhscztTd4YQ2FEjvunb2k8XSxh3DFRI73rgmX+cV5zFJhmv4JEHauX4iZ8fBsrZ/nS2dAhUDlcJ//xovAoDNTV7UwI233L8Z8XiGXyPh33cjfKdd9YHUaDW7jM1/Mihk7Hb2pQHaim4mugJXrqmxgKGW6Dcj5wbOFGCQAV0PKfLAuVW6Uu4GZlAuUTR7WNRHqi+cDcPHTOhMlm5Rc/xbqA85UFU91IwDSwvzB2ylVsOZzDcA7VULmuaarirXP7ZkBbyayNV8C8UkoAaI+GBr6Erdr+bBBIqpIb3FH9zfrdkVJDZaTL0pIoVrkp30fJ09SE1pzPfvtzLE4itPGILh2jB9I2YnhO0It4TRzZCa6q9R9/k94ZoUx31t/4XvesiH1cKt6CuQqfzo6go1DqMFK+FXBxQI4g5LeRUQAeBYrSQi+goYrSQC+koZLSQ03Skv27xGzrmDfVvWFy8OP2GAsIomd3nQKfT6XR+oD+7iRqn9swOnAAAAABJRU5ErkJggg==",
+        "selectedIconData": "iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAYASURBVHgB7ZyxcttGEIYXoIukslSJVAU/QSDJnlGqwE8QpUylyFVSRX4CU106S2UqUWWaiOnSCepceES6c2e6ErvQXQrpLv8CYIaEQFIA7o4A5r4Z2OKR4AE/F3u7C9wRWSwWi8VisVgsFovFYrE0B4dqjr+/79Hdnfd/w93dEEyoYtROaN/3N6jVOsSBH5CUPpo2Mj42wvuhcN2L4fv3IVWA2gjNAruu+6skOqZscRcxkkL8wGZOa6QWQkNk33HdS/zpUUFwoqc3NzevaU1UXui9vb1DIWWPVCDlUEr5ch0+/AlVGH9v72ChyFJOpOP0SQh2CZ+xsXgb5Lo+3vvecRz/wT5og2XxlfGSDLPQopNBJ3ClDHCAT6ftOPHPeD2k+/tQp2Wgfw/u4orS7iIW+AwCny7rH/sHEPscx+ql31uHG8kUOjnJAa0YdLBzTwhxpmOg2dnZ6UGkw7lGKUe49HMNbP7ubhfH+SbdjgGSXUhIhmhlNW5vb5/jP3/17uTDan7e7nS8ra2tD+PxWImFJz/0+VwjW7KU30Kcj5SD8e1t2O50NiH2/mw7Xns43gsyhEsKQMj1E1/mLBApAD9e90EfUh5D5BEVQYguXw2pToLIPRoiU2i4g5PZA5PxJRtttBhPmdiO893ca/QLkQtbH/vyyK+ncd0DMkSm0OwDIeoO+zFsm8PB4Nl049fYjihb9KnYhS0l2debbYNIf1FZhOhldUeGWOg62Ap4sEiP7El7bxCLnjVye8jg3lJRnjx5ePJCXFFJkvOYH0Sl9MgQpXw0Dv6U09t0O/tsDq9IHV9IBY6THqyfkiFKD4YQu59l2VyXoCKg+kZx8hETuygl4SPc4XWqobxLeiQtUgDCpHeddjtIJQft9tbW73jvX8oBfx77/ZF810eI8UvhaCP93XGo9wXf+RW+/wJjzm9kCGW1DiQGx/iyOd8MF/J6eHNzShY1cXREPKrP+UAHNQeyRCit3iFtvuJEgJrFECINObco48LUWTRFg80JNQ8/yXw/7e7uvqGCKBWa4uigcvfrVAHBuxC7UI6gJOqYEkUMnc7XuNQCai77HLkggnmXZyfVFs2DYkgNJ6vsugrlQic13sa6j4SNvJmveoumaFA0lnGtDb5llufjpAPHCan55KpQ6hFaiD5Z5tAidFSSlDKkJpNz0Ndj0RQV66+puUzy3tjVJnSTw7wH5dZHoE3oRod5Ul7m3EOjRVMU2IfUTHKHr1qFFkSN89NwG4We0NIq9II7z/Wm4AOXWoXOvPNcfwpdpXotmqLSYnPch5TDosV/7UI3KUsskxtoF7pRYV4Jo9Fv0dSQMC9+/i+kghgRuglhnixZkTQidCPCvJJjjRGhkzBvRPWm1FVpxqIpCvNqe9elaDY4izGhax3mKZh+Z07oej/zUXowNyZ0ctelful4iWxwFpMWzb7ujGoGjlnJ07BGheaH1mn5hKNqER+rkhzAqNAMLOSIagKOtavqIXilz949hvF4PMqaYFk1EI72hoOBsqdjjQvNjG9v/+60288oa2J8FeBBW8of804LWcZahGZwEn1YtlO1J09hyWcQ+Uj1ggJrX6+DFz2BZb911jxTgLM//HOiayJ+ZRZGiZ7O5CnDUn7j8IxWx9E7T5sn8XP9hYv5yFpNrnRgsVgslmpRqVXCoiUk4jU0PAxSn+j+/lpVZjbXz/PnAQ+62DbRX2hiEcLKCJ0su8YFnNlogxcH7JZZFGUW/iGdVuuSeEGuGSBCXwjxCv38Q5owXuvIwn/xwk+WXUuHdLzQSk/VkhRuq3WeFplBmHeAOP7PIAhIF5UQ2hFi6SRJiFB4xuoUdhdISg6WdBJMJpOANFEJobOsbA4VNREhgpWfyTnTKg/VEHr1LS4VWeJjahfastGqWPRw+dsKJh7FS2uu+kxImqiE0CtXRZCy9PKWUS1jyQ+GAfFSZ72jEkLzCWYu8RYXfo5ULcnJy23KeBFYOW2Km+UVrPkVaaRqCYtHXJ92XQ8nPsLffdV14aQf7iNAHxw3f7CVO4vFYrFYLBaLxWKx6Oc/Ue3d63A3ziUAAAAASUVORK5CYII="
+      },
+      {
+        "pagePath": "pages/mine/mine.html",
+        "text": "我的",
+        "ignorePlatform": ["mp-toutiao", "mp-v9tt"],
+        "iconData": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAbFBMVEX///+ampr6+vqenp6kpKShoaHb29vw8PDl5eWoqKj8/Pz29vbh4eHU1NTPz8/Hx8e3t7fq6uqysrKvr6+ioqK+vr7z8/Pn5+fY2NjKysq6urqrq6u7u7vt7e3Dw8Pp6end3d3AwMC1tbXMzMxodPrBAAADEUlEQVRo3u3Z6ZKiMBAA4M4hIdyCgMji+f7vuFsEJjDjwJBja6jK989SiUnn6LTgOI7jOM5OBVGa8RMhJ56lUQD/CfYuBE2Qi4fBPpwc0BeHxHrTZ4reomewKSzQt4oQrDlStIAewRKPyKCWXs0wZrVXypATD6zw0OiPDxP+HzSy0vJx7G9+g09u+dhnC6MdjvGN4Y14jLP5GVYMwfXhLX8IdQGGnYd2GXyDDS0bXs94GGgfvuUPg43BpORTfBfinBjtsBjHHBblIhrY/BK+waKb+cV8EfsGrBA7ycXguU+mM2ttfpEATIlE8GCVmAoRmJL2z3vAqrL/YAqmZGLS/HQSZmAK759Xw6q6/yAHU0798xisYv0HT2CKmNQYVmExrfff8Nah3v/kmi2noKG0CUB6cf6aLyc7G0iD/mlAGF+/ZhuInS1TpAQdDDpx/FvZMuUhIRvmlXir4rJheUhYORZT1DvFGADHJ/EqnR6LlhIBTNGAczSgeJoI2Ep9IvRFZCn1kcmefDGVzJI9i+ntfV4R8Obprc2E/pjJdp/HeUJv+QrTPWjfv0encIXRvLSFjIULl7bdX1MVLuZWShGPsRTxWChF7L74olRu2nmBTbGkuO8i6ruysePow8z3kuulaFtODwShA+VtkWfX5OwzDHbgOi5btOSUvSLTuxdLCvQztLwb63rXcLTGwoZyvKDtSBPqRrZEakgCOnyK5vizbOJ7zVgVYgwBDivW1VHclM8v4ciZVrIj8TL2lwYw6M7XgiDpcNTKpYUiYT8LTTT9V8ZXHOePBZpUW04uv/xouQMF1fjTUwwbsWwMj8q6yj+uDgriMRGGze7DTtSBkojIW94mAdW5Gsgf3ip+LwZljVqXn0q/dz5mKlGuZIlBd/sJFb5EQUegUvW66pbo5EMahUV8N3GvzRXqtQy0MIUJKsKDQUuoUL1GPdCEeq5h1/DvaFicphVoqRT+hRK3pKzSajdT2EBSZEyqsNsZwRROFhOuWw/TJzLiGWw+xq9G+huonGppS5AG0qYMHMdxHMf5xf4CB6MjrIUg9KUAAAAASUVORK5CYII=",
+        "selectedIconData": "iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQ3SURBVHgB7Zw9ctNQEMf/73mYoTQVSYU4AbJNkY5wAkJHFzhBuAGBCrpwAj4uQDgBpqOAkThBRJcO95C37JPFEIYBJuhp96Hsb8axk8z4SX+vVvv2w4BhGIZhGIZhGIZhGMZ4cMiYcmurwJcvtzy/JKJt/tO0e0RW/Gicc00Aljg5eV3XdYNMyVLocj6/ywLuYi3uWajJuYP6w4cXyIyshC6vX992ITzjlwX60bDg+zkJnoXQZVlOvfcPCLiPhPDJHYQQHrJLWUEZdaFZ5MJ5/yq+xDA0FMJNbf+tKnQn8hv0dxV/Q11sNaGju2CRKwwv8hqimiOXm1puxEOJ6JMhJXLEubJbUwUVi27DN+AZFOhcyBLCqFg0i6xnWd6rfMDiQkdrhqTL+JWiXCx2IYy40GzNe1CGN0V3IYyoj+7CuSNkAPvqq5LhnqxFe7+DXBA+FlGhebEbyIdrEERUaNK9Cf4E+8xtCCJ9MyyQD1MIIi206Mn9hVELfW6RFlo9L3wK0WM5v0ITNRBENuogeotM4AjoEwSRtWjnauSCc0sIIit0CIfIBeFjERW6zS0QLaENV1uky1ri4R37afUWAD6GAwijUmGZzWZH7CMLaMDRRlVVVyGMyoaFLeoelOC196HABAocHx83G5ubl/hy2oIgHNI9ravqCRTQ24KHsB9vSpAiblDimkqoCR37K/gyvi2yQ+M1NHs6IqpJpRhiRQEGFftH40wDRdSzd53Ys+g/kZj4njmIHMmrbbcsY1/0g96h39pV3NNolPkdeTais+As9h6LfqYOU4q7TqLnLLA1op+F2J7AT7e4Yr3NAhYulsKcW1dGiFYU064xORRCjF6yHq0wDMP4B3IYrZjiwoUCJyfxxld4567w85RvbAV+VKqLP7xF0/50rn3mE2oC0Sf+/TM/PuLr1/pczrC0wnq/084OrjuXhppdOU28ada83mEUv37/fglhRIRuxZ1MdnmxnX+YHRyCho9lGbx/ISX6oEJ3Y2173VhbTs0zpxGZSRxM6ITDmVIMOrk1SK5jsVjsscgSY20pib3bFV+Fg7TzJk/8z+fzOAH7GP8nF3nbf2fj8uWGixMfkZCkrqNcLHYc0SuMAHYjsxgXIhHJhBacgpWi6cROEoMn89F8ye1jPCJHCo73k30JQBKLzmkIKDGrbqiot1UnsejOmsfINJVVp3EdzuU0BJQUvuSTDH/2FprdRpsMwngpugJEL/pb9GRSYPz0HpXrL/Q6nTluvO/dq5fCR+eaLEpJ73O0qSwhTGghTGghTGghTGgh+gsdwhJjJ4QKPUlh0TFnm9PocVqIjjip9Bo96S1021AewkOMFCJKcm5JSllc9nm3sbnppL9sZGCIS3KP6qpK0redtpQVky+cMnWxA/R712d+0J//Syty7pD98suc+qsNwzAMwzAMwzAMwzBy4htR96JNfcRi5QAAAABJRU5ErkJggg=="
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/homepage/homepage": {
+      "network": "all",
+      "packages": ["packageAssets", "packageWare"]
+    },
+    "pages/mine/mine": {
+      "network": "all",
+      "packages": ["packageOrder"]
+    },
+    "pages/jump/jump": {
+      "network": "all",
+      "packages": ["packageWare"]
+    }
+  },
+  "embeddedAppIdList": [
+    "wx2254e48a47f4a372",
+    "wx9572d0552dfc7579",
+    "wx02abda98964d6988",
+    "wx2b4fb2d737c553f3",
+    "wx519f298563f6c893",
+    "wx4564403a7ce5cdcc"
+  ],
+  "renderer": {
+    "allUsed": ["webview"],
+    "default": "webview"
+  },
+  "requiredPrivateInfos": ["getLocation", "chooseAddress", "chooseLocation"],
+  "__usePrivacyCheck__": true,
+  "agent": {
+    "skills": [
+      {
+        "name": "shopping",
+        "description": "小程序购物 Agent 技能，支持按商品名搜索商品、推荐门店热卖商品、展示商品卡片、加购、查看购物车和发起结算。用户输入饮料、牛奶、啤酒、草莓等商品或类目意图时，应调用该技能的 getWares 能力。",
+        "path": "packageAgents/skills"
+      }
+    ],
+    "detailPagePackages": [
+      {
+        "root": "packageAgentDetail"
+      }
+    ]
+  },
+  "componentFramework": {
+    "allUsed": ["exparser"],
+    "default": "exparser"
+  }
+}

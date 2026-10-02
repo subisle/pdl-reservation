@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ware-price": "/packageBaseComp/components/Base/WarePrice/WarePrice"
+  },
+  "componentPlaceholder": {
+    "ware-price": "view"
+  }
+}

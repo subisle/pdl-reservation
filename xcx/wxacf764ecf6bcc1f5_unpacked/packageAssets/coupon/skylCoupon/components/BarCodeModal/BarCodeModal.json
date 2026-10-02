@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "d-barcode": "/packageBaseComp/components/Base/barCode/DBarcode"
+  },
+  "componentPlaceholder": {
+    "d-barcode": "view"
+  }
+}

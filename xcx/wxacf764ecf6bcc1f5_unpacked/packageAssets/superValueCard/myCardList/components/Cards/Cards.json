@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "last-expired-tip": "/packageAssets/superValueCard/myCardList/components/LastExpiredTip/LastExpiredTip"
+  }
+}

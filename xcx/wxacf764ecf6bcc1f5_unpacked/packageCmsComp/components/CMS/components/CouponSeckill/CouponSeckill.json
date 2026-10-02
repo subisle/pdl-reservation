@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "count-down": "/node-modules/@dmall/jimoui-mp/components/CountDown/CountDown"
+  }
+}

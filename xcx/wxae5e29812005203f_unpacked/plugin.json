@@ -1,0 +1,26 @@
+{
+  "renderer": {
+    "allUsed": ["webview"],
+    "default": "webview"
+  },
+  "componentFramework": {
+    "allUsed": ["exparser"],
+    "default": "exparser"
+  },
+  "page": {
+    "__plugin__/wxae5e29812005203f/pages/chat/chat.html": {
+      "window": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "styleIsolation": "page-apply-shared",
+        "disableScroll": true,
+        "renderer": "webview",
+        "isNewBlended": false,
+        "__warning__": "invalid page.json [\"styleIsolation\"]、page.json [\"isNewBlended\"]"
+      }
+    }
+  },
+  "pages": {
+    "chat": "__plugin__/wxae5e29812005203f/pages/chat/chat"
+  }
+}

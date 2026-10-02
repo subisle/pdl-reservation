@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "coupon-online": "/packageBaseComp/components/Base/Coupon/CouponOnline/CouponOnline"
+  },
+  "componentPlaceholder": {
+    "coupon-online": "view"
+  }
+}

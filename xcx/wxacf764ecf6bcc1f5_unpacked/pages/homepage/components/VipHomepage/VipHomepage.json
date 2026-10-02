@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-tab-bar": "/components/CustomTabBar/CustomTabBar",
+    "c-m-s": "/packageCmsComp/components/CMS/CMS"
+  },
+  "componentPlaceholder": {
+    "c-m-s": "view"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-tab-bar": "/components/CustomTabBar/CustomTabBar",
+    "c-m-s": "/packageCmsComp/components/CMS/CMS",
+    "notice": "/pages/components/HomePage/Notice/Notice",
+    "temp-coupon": "/pages/components/HomePage/TempCoupon/TempCoupon",
+    "member-code": "/pages/components/HomePage/MemberCode/MemberCode"
+  },
+  "componentPlaceholder": {
+    "c-m-s": "view"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ware-item": "/packageBaseComp/components/Base/WareItem/WareItem"
+  },
+  "componentPlaceholder": {
+    "ware-item": "view"
+  }
+}

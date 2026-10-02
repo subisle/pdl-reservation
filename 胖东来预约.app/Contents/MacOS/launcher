@@ -1,0 +1,26 @@
+#!/bin/bash
+# 双击启动: 后台起本地 Web 服务, 自动打开浏览器。不弹终端。
+cd "$(dirname "$0")/../../.." || exit 1
+PY="./.venv/bin/python"
+[ -x "$PY" ] || PY="$(command -v python3)"
+
+PORT=8765
+# 端口被占用就顺延, 最多试 10 个
+for i in $(seq 0 9); do
+  if ! nc -z 127.0.0.1 $((PORT+i)) 2>/dev/null; then PORT=$((PORT+i)); break; fi
+done
+
+mkdir -p "$HOME/.pdl_grab"
+LOG="$HOME/.pdl_grab/web.log"
+nohup "$PY" -m pdl_grab.cli web --port "$PORT" >>"$LOG" 2>&1 &
+echo $! > "$HOME/.pdl_grab/web.pid"
+
+# 等服务起来再开浏览器
+for i in $(seq 1 40); do
+  sleep 0.25
+  if curl -sf "http://127.0.0.1:$PORT/api/state" -o /dev/null 2>/dev/null; then
+    open "http://127.0.0.1:$PORT"
+    exit 0
+  fi
+done
+open "http://127.0.0.1:$PORT" 2>/dev/null

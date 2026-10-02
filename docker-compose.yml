@@ -1,0 +1,9 @@
+services:
+  pdl-reservation:
+    build: .
+    container_name: pdl-reservation
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./config.json:/app/config.json
+    restart: unless-stopped

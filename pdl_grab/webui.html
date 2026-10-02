@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>胖东来预约</title>
+<style>
+:root{
+  --bg:#fff; --bg2:#fafafa; --surf:#fff; --text:#1c1c1e; --t2:#8a8a8f; --t3:#b9b9be;
+  --sep:#e9e9ec; --sep2:#d6d6da; --accent:#1c1c1e; --at:#fff; --ghost:#f2f2f4;
+  --sel:#f4f4f6; --danger:#e5484d; --ok:#2fa96b; --warn:#c88a04;
+  --r:10px; --fast:cubic-bezier(.23,1,.32,1);
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0d0d0f; --bg2:#131315; --surf:#161618; --text:#ededf0; --t2:#8b8b90; --t3:#5a5a60;
+  --sep:#222225; --sep2:#2e2e32; --accent:#f2f2f4; --at:#0d0d0f; --ghost:#1c1c1f;
+  --sel:#1a1a1d; --danger:#ff6369; --ok:#3dd68c; --warn:#e3b341;
+}}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);
+  font:400 13px/1.5 -apple-system,"SF Pro Text","PingFang SC",Helvetica,sans-serif;
+  display:flex;min-height:100vh}
+nav{width:180px;flex:none;border-right:1px solid var(--sep);padding:28px 0;
+  position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+nav .logo{font-size:14px;font-weight:600;padding:0 20px 22px;letter-spacing:.2px}
+nav a{display:flex;align-items:center;gap:9px;padding:9px 20px;color:var(--t2);
+  text-decoration:none;font-size:13px;cursor:pointer;position:relative;
+  transition:color .12s var(--fast)}
+nav a:hover{color:var(--text)}
+nav a.on{color:var(--text);font-weight:500}
+nav a.on::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:2px;
+  background:var(--accent);border-radius:0 2px 2px 0}
+nav .st{margin-top:auto;padding:0 20px;font-size:10px;color:var(--t3)}
+main{flex:1;padding:34px 44px 60px;max-width:920px;min-width:0}
+h1{font-size:22px;font-weight:600;letter-spacing:-.3px}
+.sub{color:var(--t2);font-size:12px;margin-top:3px}
+.hd{margin-bottom:26px}
+.row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.row>label{width:104px;flex:none;color:var(--t2);font-size:12px;text-align:right}
+.grow{flex:1;min-width:0}
+select,input[type=text],input[type=password]{width:100%;background:transparent;color:var(--text);
+  border:0;border-bottom:1px solid var(--sep);padding:7px 0;font:inherit;outline:none;
+  transition:border-color .15s var(--fast);border-radius:0}
+select:hover,input:hover{border-bottom-color:var(--sep2)}
+select:focus,input:focus{border-bottom-color:var(--t3)}
+select:disabled,input:disabled{color:var(--t3);cursor:not-allowed}
+select{cursor:pointer;appearance:none;-webkit-appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--t3) 50%),
+  linear-gradient(135deg,var(--t3) 50%,transparent 50%);
+  background-position:calc(100% - 9px) 52%,calc(100% - 5px) 52%;
+  background-size:4px 4px,4px 4px;background-repeat:no-repeat;padding-right:22px}
+.hint{color:var(--t3);font-size:11px;margin-left:14px;white-space:nowrap}
+.hint.ok{color:var(--ok)} .hint.warn{color:var(--warn)} .hint.danger{color:var(--danger)}
+button{font:inherit;border:0;cursor:pointer;border-radius:var(--r);padding:8px 16px;
+  transition:transform .1s var(--fast),background .12s var(--fast),opacity .12s;
+  background:var(--ghost);color:var(--text)}
+button:hover{background:var(--sel)}
+button:active{transform:scale(.975)}
+button.pri{background:var(--accent);color:var(--at)}
+button.pri:hover{opacity:.82}
+button:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.btns{display:flex;gap:8px;margin-top:22px}
+hr{border:0;border-top:1px solid var(--sep);margin:26px 0}
+.clock{font:600 46px/1 ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:-1.5px}
+.date{color:var(--t3);font-size:12px;margin-top:5px}
+.cd{font:600 26px/1 ui-monospace,"SF Mono",Menlo,monospace;margin-top:26px;letter-spacing:-.5px}
+.cd.hot{color:var(--danger)}
+.tgt{color:var(--t2);font-size:12px;margin-top:9px;line-height:1.7}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;color:var(--t3);font-weight:400;padding:7px 10px;
+  border-bottom:1px solid var(--sep);font-size:11px}
+td{padding:9px 10px;border-bottom:1px solid var(--sep);color:var(--text)}
+tbody tr{cursor:pointer;transition:background .1s var(--fast)}
+tbody tr:hover{background:var(--bg2)}
+tbody tr.on{background:var(--sel)}
+td.m{font-family:ui-monospace,"SF Mono",Menlo,monospace;color:var(--t2)}
+.pill{display:inline-block;padding:1px 7px;border-radius:5px;font-size:10px;
+  background:var(--sel);color:var(--t2)}
+.pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.pill.danger{background:color-mix(in srgb,var(--danger) 15%,transparent);color:var(--danger)}
+#log{font:400 11px/1.75 ui-monospace,"SF Mono",Menlo,monospace;color:var(--t2);
+  white-space:pre-wrap;word-break:break-all;height:calc(100vh - 190px);overflow:auto}
+.card{border:1px solid var(--sep);border-radius:var(--r);padding:16px 18px;margin-bottom:12px}
+.chk{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--t2);font-size:12px;
+  user-select:none}
+.chk input{appearance:none;width:15px;height:15px;border:1px solid var(--sep2);border-radius:4px;
+  cursor:pointer;transition:background .12s var(--fast);flex:none;position:relative}
+.chk input:checked{background:var(--accent);border-color:var(--accent)}
+.chk input:checked::after{content:"";position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;
+  border:solid var(--at);border-width:0 1.5px 1.5px 0;transform:rotate(42deg)}
+.empty{color:var(--t3);font-size:12px;padding:28px 0;text-align:center}
+.err{background:color-mix(in srgb,var(--danger) 12%,transparent);color:var(--danger);
+  padding:9px 13px;border-radius:8px;font-size:12px;margin-bottom:14px;display:none}
+.err.on{display:block}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">胖东来预约</div>
+  <a data-p="grab" class="on">抢购</a>
+  <a data-p="target">目标</a>
+  <a data-p="sessions">场次</a>
+  <a data-p="accounts">账号</a>
+  <a data-p="log">日志</a>
+  <div class="st" id="st">就绪</div>
+</nav>
+<main>
+  <div class="err" id="err"></div>
+
+  <section id="p-grab">
+    <div class="hd"><h1>抢购</h1></div>
+    <div class="clock" id="clock">--:--:--</div>
+    <div class="date" id="date"></div>
+    <div class="cd" id="cd">—</div>
+    <div class="tgt" id="tgt">在「场次」页选择目标场次</div>
+    <div class="btns">
+      <button id="b-pre">预检</button>
+      <button id="b-load">加载场次</button>
+      <button id="b-sched" class="pri">定时抢购</button>
+      <button id="b-now">立即抢购</button>
+      <button id="b-stop" disabled>停止</button>
+    </div>
+    <hr>
+    <div id="res"></div>
+    <div id="pre"></div>
+  </section>
+
+  <section id="p-target" hidden>
+    <div class="hd"><h1>预约目标</h1><div class="sub">城市 → 门店 → 品类 → 业态 → 分类 → 场次</div></div>
+    <div class="row"><label>城市</label>
+      <select id="f-city" class="grow"></select>
+      <span class="hint" id="h-coord"></span></div>
+    <div class="row"><label>门店</label><select id="f-store" class="grow"></select>
+      <span class="hint" id="h-dist"></span></div>
+    <div class="row"><label>品类</label><select id="f-biz" class="grow"></select>
+      <span class="hint" id="h-fence"></span></div>
+    <div class="row"><label>业态</label><select id="f-stru" class="grow"></select></div>
+    <div class="row"><label>分类</label><select id="f-shoppe" class="grow"></select></div>
+    <div class="row"><label>场次</label><select id="f-ses" class="grow"></select>
+      <span class="hint" id="h-ses"></span></div>
+    <div class="row"><label>经纬度</label><input type="text" id="f-coord" class="grow"
+      placeholder="纬度,经度"><span class="hint" id="h-xy">可改</span></div>
+    <label class="chk" style="margin:14px 0 0 104px">
+      <input type="checkbox" id="f-jit" checked>坐标随机偏移（避免每次都落在围栏正中心）</label>
+    <div class="btns">
+      <button id="b-refresh">刷新门店</button>
+      <button id="b-stru">加载业态/分类</button>
+      <button id="b-apply" class="pri">应用</button>
+    </div>
+  </section>
+
+  <section id="p-sessions" hidden>
+    <div class="hd"><h1>场次</h1><div class="sub">点击选择目标场次</div></div>
+    <table><thead><tr><th>场次</th><th>名称</th><th>日期</th><th>预约开始</th><th>状态</th></tr></thead>
+      <tbody id="tb-ses"></tbody></table>
+    <div class="empty" id="em-ses">暂无场次，点「加载场次」</div>
+  </section>
+
+  <section id="p-accounts" hidden>
+    <div class="hd"><h1>账号</h1><div class="sub">多账号并发下单，各自独立 MQTT 连接</div></div>
+
+    <div class="row"><label>默认 token</label><input type="password" id="g-token" class="grow"
+      placeholder="留空则每个账号都必须单独填"></div>
+    <div class="row"><label>默认场次</label><input type="text" id="g-session" class="grow"
+      placeholder="账号不填专属场次时，用这个"></div>
+    <div class="row"><label>开抢时间</label><input type="text" id="g-fire" class="grow"
+      placeholder="HH:MM:SS，留空则用场次自带时间"></div>
+    <div class="row"><label>业务线</label><select id="g-channel" class="grow">
+      <option value="market">market 超市/通用</option>
+      <option value="tea">tea 茶叶</option></select></div>
+
+    <hr>
+    <div class="hd" style="margin-bottom:12px"><h1 style="font-size:15px">账号列表</h1>
+      <div class="sub">token 与场次留空 = 继承上面的默认值</div></div>
+    <table><thead><tr><th>账号名</th><th>token</th><th>专属场次</th></tr></thead>
+      <tbody id="tb-acc"></tbody></table>
+
+    <div class="btns"><button id="b-add">+ 添加</button>
+      <button id="b-del">删除</button>
+      <button id="b-save-acc" class="pri">保存</button></div>
+
+    <div id="acc-edit" hidden>
+      <hr>
+      <div class="row"><label>账号名</label><input type="text" id="a-name" class="grow"
+        placeholder="如 妈妈"></div>
+      <div class="row"><label>token</label><input type="password" id="a-token" class="grow"
+        placeholder="留空 = 继承默认"></div>
+      <div class="row"><label>专属场次</label><input type="text" id="a-session" class="grow"
+        placeholder="留空 = 继承默认"></div>
+      <div class="btns" style="margin-top:14px">
+        <button id="b-apply-acc">应用到选中</button>
+        <button id="b-clear-acc" class="ghost">清空(改回继承)</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="p-log" hidden>
+    <div class="hd"><h1>日志</h1></div>
+    <div id="log"></div>
+  </section>
+</main>
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+let S = {}, sel = {store:null, biz:null}, accounts = [], editing = -1;
+
+const err = m => { const e=$('#err'); e.textContent = m||''; e.classList.toggle('on', !!m); };
+async function api(p, d){
+  const r = await fetch('/api/'+p, {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(d||{})});
+  const j = await r.json().catch(()=>({}));
+  if(!r.ok) throw new Error(j.error||('HTTP '+r.status));
+  return j;
+}
+function toast(m){ err(m); if(m) setTimeout(()=>err(''), 5000); }
+
+function payload(){
+  return {city:$('#f-city').value, latlng:$('#f-coord').value,
+    store_code:$('#f-store').dataset.code||'', business_code:$('#f-biz').dataset.code||'',
+    structure_code:$('#f-stru').dataset.code||'', shoppe_code:$('#f-shoppe').dataset.code||'',
+    session_code:$('#g-session').value.trim(), fire_at:$('#g-fire').value.trim(),
+    token:$('#g-token').value.trim(), channel:$('#g-channel').value};
+}
+function fillSel(el, items, cur){
+  el.innerHTML = items.length ? '' : '<option value=""></option>';
+  items.forEach(([val, txt])=>{
+    const o=document.createElement('option'); o.value=val; o.textContent=txt; el.appendChild(o);});
+  // cur 可能为空串/不存在于 items —— 此时回落到第一项, 否则 select 会显示空白
+  el.value = (cur && items.some(i=>i[0]===cur)) ? cur : (items[0]?.[0] ?? '');
+}
+const label = b => b.title+'('+b.code+')'+(b.fence?'  ·限'+b.radius_m/1000+'km':'');
+
+// ---- 目标级联 ----
+function onCity(){
+  const c = S.cities?.indexOf($('#f-city').value);
+  const [lat,lng] = cityXY($('#f-city').value);
+  $('#f-coord').value = lat+','+lng; $('#h-coord').textContent = lat+', '+lng;
+  loadStores();
+}
+function cityXY(name){ return (S.city_xy?.[name]) || ['34.035700','113.883800']; }
+async function loadStores(){
+  try{ const j = await api('catalog',{city:$('#f-city').value, latlng:$('#f-coord').value});
+       await refresh(); toast(''); }
+  catch(e){ toast(e.message); }
+}
+function onStore(keepCoord){
+  const st = S.stores?.find(s=>s.code===$('#f-store').value);
+  if(!st) return;
+  $('#h-dist').textContent = st?.pos || '';
+  // 必须带上当前选中值: fillSel 不传 cur 时会回落到第一项,
+  // 而 refresh() 也会调 onStore(), 不带 cur 就会把用户选的品类悄悄跳回第一个,
+  // 连带 onBiz() 把坐标和场次都切到别的品类去。
+  const cur = keepCoord ? $('#f-biz').value : null;
+  fillSel($('#f-biz'), (st?.businesses||[]).map(b=>[b.code, label(b)]), cur);
+  $('#f-biz').dataset.code = $('#f-biz').value;
+  onBiz(keepCoord);
+}
+async function onBiz(keepCoord){
+  const st = S.stores?.find(s=>s.code===$('#f-store').value);
+  const b  = st?.businesses?.find(x=>x.code===$('#f-biz').value);
+  $('#f-biz').dataset.code = $('#f-biz').value;
+  const h = $('#h-fence');
+  if(!b){ h.textContent=''; h.className='hint'; return; }
+  if(!b.fence){ h.textContent = b.title+'无围栏'; h.className='hint'; return; }
+  if(keepCoord){ // 只是刷新页面/同步状态, 不要覆盖用户手改过的经纬度
+    const j = await api('auto_coord', {store_code:st.code, business_code:b.code, jitter:false});
+    h.textContent = j.result?.text || ''; h.className = 'hint '+(j.result?.ok?'ok':'danger');
+    fillSel($('#f-stru'), []); fillSel($('#f-shoppe'), []);
+    return;
+  }
+  // 自动把坐标切到该品类的围栏中心
+  const j = await api('auto_coord', {store_code:st.code, business_code:b.code,
+                                     jitter:$('#f-jit').checked});
+  if(j.result?.latlng && j.result.latlng !== ','){ $('#f-coord').value = j.result.latlng;
+    $('#h-coord').textContent = j.result.latlng.replace(',', ', '); }
+  h.textContent = j.result?.text || ''; h.className = 'hint '+(j.result?.ok?'ok':'danger');
+  fillSel($('#f-stru'), []); fillSel($('#f-shoppe'), []);
+}
+async function onStru(){
+  const j = await api('stru', {store_code:$('#f-store').dataset.code,
+    business_code:$('#f-biz').dataset.code, stru_code:$('#f-stru').value});
+  fillSel($('#f-stru'), (j.result.strus||[]).map(x=>[x.code, x.title+'('+x.code+')']));
+  fillSel($('#f-shoppe'), (j.result.shoppes||[]).map(x=>[x.code, x.title+'('+x.code+')']));
+  syncCodes();
+}
+// ---- 场次(选完分类自动拉可约场次) ----
+async function loadSessions(){
+  const sel = $('#f-ses'), h = $('#h-ses');
+  sel.innerHTML = '<option value="">加载中…</option>'; h.textContent=''; h.className='hint';
+  try{
+    const j = await api('sessionlist', payload());
+    const list = j.result?.sessions || [];
+    const ok = list.filter(x=>x.bookable);
+    sel.innerHTML = '';
+    if(!list.length){ sel.innerHTML = '<option value="">该专柜暂无可约场次</option>';
+      h.textContent='0 个'; h.className='hint warn'; return; }
+    // 可约的排前面, 减少一次点击
+    list.sort((a,b)=> (b.bookable?1:0)-(a.bookable?1:0));
+    list.forEach(x=>{
+      const o=document.createElement('option'); o.value=x.code;
+      o.textContent = (x.bookable?'':'✗ ') + x.code + '  ' + (x.name||'') +
+        (x.booking_start ? '  ' + x.booking_start.replace('T',' ').slice(5,16) : '') +
+        (x.bookable ? '' : (x.status_desc||x.status ? '  ' + (x.status_desc||x.status) : ''));
+      sel.appendChild(o);
+    });
+    sel.value = ok[0]?.code || list[0].code;
+    // 倒计时/目标横幅只认 S.target, 不在这里设的话, 用下拉选完场次时钟一直是 "—"
+    setTarget(list.find(x=>x.code===sel.value));
+    h.textContent = `可约 ${ok.length}/${list.length}`;
+    h.className = ok.length ? 'hint ok' : 'hint danger';
+    $('#f-ses').dataset.code = sel.value;
+    if(sel.value) $('#g-session').value = sel.value;
+    log(`场次 ${list.length} 个, 可约 ${ok.length} 个`);
+  }catch(e){
+    sel.innerHTML = '<option value="">加载失败</option>';
+    h.textContent = (e.message||'').slice(0,20); h.className='hint danger';
+  }
+}
+$('#f-ses').onchange = ()=>{
+  $('#f-ses').dataset.code = $('#f-ses').value;
+  if($('#f-ses').value){
+    $('#g-session').value = $('#f-ses').value;
+    setTarget((S.sessions||[]).find(x=>x.code===$('#f-ses').value));
+  }
+};
+function syncCodes(){
+  for(const [id,f] of [['#f-store','store_code'],['#f-biz','business_code'],
+                       ['#f-stru','structure_code'],['#f-shoppe','shoppe_code']]){
+    const el=$(id); el.dataset.code = el.value||'';
+  }
+}
+
+// ---- 目标场次(倒计时与横幅的唯一来源) ----
+function setTarget(s){
+  S.target = s || null;
+  $('#tgt').textContent = s
+    ? `目标 ${s.code} · ${s.name || ''} · 开抢 ${(s.fire_at||'').replace('T',' ').slice(0,19)}`
+    : '在「场次」页选择目标场次';
+  tick();
+}
+
+// ---- 场次 ----
+function renderSessions(){
+  const tb=$('#tb-ses'), list=S.sessions||[];
+  $('#em-ses').style.display = list.length?'none':'block';
+  tb.innerHTML = list.map(s=>`<tr data-c="${esc(s.code)}" class="${S.target?.code===s.code?'on':''}">
+    <td class="m">${esc(s.code)}</td><td>${esc(s.name||'')}</td><td>${esc(s.date||'-')}</td>
+    <td class="m">${esc((s.booking_start||'-').replace('T',' ').slice(0,19))}</td>
+    <td>${s.bookable?'<span class="pill ok">可约</span>':`<span class="pill danger">${esc(s.status_desc||s.status||'满')}</span>`}</td>
+    </tr>`).join('');
+  tb.querySelectorAll('tr').forEach(tr=>tr.onclick=()=>{
+    const s=list.find(x=>x.code===tr.dataset.c);
+    tb.querySelectorAll('tr').forEach(x=>x.classList.remove('on')); tr.classList.add('on');
+    if(s) $('#g-session').value=s.code;
+    setTarget(s); log('✓ 已选场次 '+tr.dataset.c);
+  });
+}
+
+// ---- 账号 ----
+function renderAccounts(){
+  const tb=$('#tb-acc');
+  tb.innerHTML = accounts.map((a,i)=>`<tr data-i="${i}" class="${editing===i?'on':''}">
+    <td>${esc(a.name||'账号'+(i+1))}</td>
+    <td class="m">${a.token?esc(mask(a.token)):'<span style="color:var(--t3)">继承默认</span>'}</td>
+    <td class="m">${a.session_code?esc(a.session_code):'<span style="color:var(--t3)">继承默认</span>'}</td></tr>`).join('')
+    || '<tr><td colspan="3" style="color:var(--t3);text-align:center;padding:20px">暂无账号</td></tr>';
+  tb.querySelectorAll('tr[data-i]').forEach(tr=>tr.onclick=()=>{
+    editing=+tr.dataset.i;
+    const a=accounts[editing]||{};
+    $('#a-name').value=a.name||''; $('#a-token').value=a.token||'';
+    $('#a-session').value=a.session_code||'';
+    $('#acc-edit').hidden=false;
+    renderAccounts();
+  });
+}
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const mask = t => !t?'': (t.length>14 ? t.slice(0,8)+'…'+t.slice(-4) : t);
+
+// ---- 时钟 ----
+function tick(){
+  const n=new Date(), p=x=>String(x).padStart(2,'0');
+  $('#clock').textContent = p(n.getHours())+':'+p(n.getMinutes())+':'+p(n.getSeconds());
+  $('#date').textContent = n.getFullYear()+'.'+p(n.getMonth()+1)+'.'+p(n.getDate())+'  '+
+    ['周日','周一','周二','周三','周四','周五','周六'][n.getDay()];
+  const fa = S.target?.fire_at ? new Date(S.target.fire_at) : null;
+  const cd=$('#cd');
+  if(!fa){ cd.textContent='—'; cd.className='cd'; return; }
+  const s=(fa-n)/1000;
+  if(s<=0){ cd.textContent='已开抢'; cd.className='cd'; return; }
+  const h=Math.floor(s/3600), m=Math.floor(s%3600/60), x=Math.floor(s%60);
+  cd.textContent = (h?h+':':'')+p(m)+':'+p(x)+' 后开抢';
+  cd.className = 'cd'+(s<=60?' hot':'');
+}
+function setBusy(b){
+  S.busy=b; $('#st').textContent = b?'运行中':'就绪';
+  ['#b-load','#b-sched','#b-now','#b-pre'].forEach(i=>$(i).disabled=b);
+  $('#b-stop').disabled=!b;
+}
+function log(m){ const e=$('#log'); e.textContent += m+'\n'; e.scrollTop=e.scrollHeight; }
+
+// ---- 状态同步 ----
+async function refresh(){
+  S = await (await fetch('/api/state')).json();
+  if(!$('#f-city').options.length){
+    fillSel($('#f-city'), S.cities.map(c=>[c,c]), S.city);
+    $('#f-coord').value = S.lat+','+S.lng; $('#h-coord').textContent = S.lat+', '+S.lng;
+  }
+  const cityLabel = $('#f-city').value || S.city || '';
+  fillSel($('#f-store'), (S.stores||[]).map(s=>[s.code,
+    (cityLabel ? cityLabel+' · ' : '') + s.title+'('+s.code+')  '+s.pos]), S.store_code);
+  $('#f-store').dataset.code = $('#f-store').value;
+  const st = (S.stores||[]).find(s=>s.code===$('#f-store').value);
+  fillSel($('#f-biz'), (st?.businesses||[]).map(b=>[b.code, label(b)]), S.business_code);
+  $('#f-biz').dataset.code = $('#f-biz').value;
+  if(st) onStore(true);   // 只补距离/围栏状态, 保留用户选的品类和手填的坐标
+  if(!$('#g-session').value && S.session_code) $('#g-session').value = S.session_code;
+  if(!$('#g-token').value && S.token) $('#g-token').value = S.token;
+  $('#g-channel').value = S.channel || 'market';
+  accounts = S.accounts||[]; renderAccounts(); renderSessions();
+  (S.logs||[]).forEach(()=>{});
+  setBusy(S.busy);
+  setTarget(S.target);
+}
+
+// ---- 事件 ----
+function showPage(k){
+  $$('nav a').forEach(x=>x.classList.toggle('on', x.dataset.p===k));
+  $$('main section').forEach(s=>s.hidden = s.id!=='p-'+k);
+}
+$$('nav a').forEach(a=>a.onclick=()=>{ location.hash=a.dataset.p; });
+addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'grab'));
+$('#f-city').onchange = onCity;
+$('#f-store').onchange = ()=>{ syncCodes(); onStore(); };   // 换门店才重算坐标
+$('#f-biz').onchange   = onBiz;
+$('#f-stru').onchange  = onStru;
+$('#f-shoppe').onchange= ()=>{ syncCodes(); if($('#f-shoppe').value) loadSessions(); };
+$('#f-jit').onchange   = onBiz;
+$('#f-coord').oninput  = ()=>$('#h-coord').textContent = $('#f-coord').value.replace(',', ', ');
+$('#b-refresh').onclick= loadStores;
+$('#b-stru').onclick   = async()=>{ try{ await onStru(); }catch(e){ toast(e.message); } };
+$('#b-apply').onclick  = async()=>{ syncCodes();
+  try{ await api('config', payload()); toast(''); log('✓ 已应用'); }catch(e){ toast(e.message); } };
+$('#b-load').onclick   = async()=>{ setBusy(1);
+  try{ await api('sessions', payload()); await refresh(); }catch(e){ toast(e.message); setBusy(0);} };
+$('#b-pre').onclick = async()=>{
+  setBusy(1);
+  try{
+    const j = await api('preflight', payload());
+    const box = $('#pre');
+    box.innerHTML = '<div class="hd" style="margin:18px 0 8px"><h1 style="font-size:15px">预检结果</h1></div>' +
+      (j.result?.results||[]).map(r=>
+        `<div class="card" style="padding:11px 14px;margin-bottom:6px">
+           <div style="font-size:12px;font-weight:500;margin-bottom:2px">
+             <span style="color:var(--${r.ok?'ok':'danger'})">${r.ok?'✓':'✗'}</span> ${esc(r.name)}</div>
+           ${r.ok?'':`<div style="font-size:11px;color:var(--danger);white-space:pre-wrap">${esc(r.msg)}</div>`}
+         </div>`).join('');
+    log(j.result?.ok ? '✓ 预检全部通过, 可以定时抢购' : '✗ 预检未通过');
+  }catch(e){ toast(e.message); }
+  finally{ setBusy(0); await refresh(); }
+};
+// /api/grab 只是受理请求, 真正开抢跑在服务端后台线程里。
+// 所以不能在请求返回后就 setBusy(0) —— 那会让"停止"按钮当场变灰,
+// 用户在等待开抢的这段时间里根本没法取消。这里轮询 /api/state 直到服务端真的空下来。
+async function waitIdle(){
+  for(let i=0; i<600; i++){
+    await new Promise(r=>setTimeout(r, 500));
+    try{ const st = await (await fetch('/api/state')).json();
+         setBusy(st.busy);
+         if(!st.busy){ await refresh(); return; } }
+    catch(e){ /* 服务暂时不可达, 继续等 */ }
+  }
+  setBusy(0);
+}
+const grab = mode => async()=>{ setBusy(1);
+  try{ await api('grab', {...payload(), mode}); await waitIdle(); }
+  catch(e){ toast(e.message); setBusy(0); } };
+$('#b-sched').onclick = grab('schedule');
+$('#b-now').onclick   = grab('now');
+$('#b-stop').onclick  = async()=>{ try{ await api('stop',{}); }catch(e){ toast(e.message);} };
+$('#b-add').onclick   = ()=>{ accounts.push({name:'账号'+(accounts.length+1),token:'',session_code:''});
+  editing=accounts.length-1;
+  $('#a-name').value=accounts[editing].name; $('#a-token').value=''; $('#a-session').value='';
+  $('#acc-edit').hidden=false; renderAccounts(); };
+$('#b-del').onclick   = ()=>{ if(editing>=0){ accounts.splice(editing,1); editing=-1; $('#acc-edit').hidden=true; renderAccounts(); } };
+function applyAcc(){
+  if(editing<0) return;
+  accounts[editing] = {...accounts[editing],
+    name:$('#a-name').value.trim() || accounts[editing].name,
+    token:$('#a-token').value.trim(),          // 留空 = 继承默认
+    session_code:$('#a-session').value.trim() // 留空 = 继承默认
+  };
+  renderAccounts();
+  log(`✓ ${accounts[editing].name}: token ${accounts[editing].token?'已单独设置':'继承默认'}, ` +
+      `场次 ${accounts[editing].session_code||'继承默认'}`);
+}
+$('#b-apply-acc').onclick = applyAcc;
+$('#b-clear-acc').onclick = ()=>{ $('#a-token').value=''; $('#a-session').value=''; applyAcc(); };
+$('#b-save-acc').onclick = async()=>{
+  applyAcc();
+  try{ await api('accounts',{accounts}); toast(''); log('✓ 已保存账号'); await refresh(); }
+  catch(e){ toast(e.message); } };
+
+// ---- SSE 实时日志 ----
+const es = new EventSource('/api/stream');
+es.onmessage = e => log(e.data);
+es.onerror = () => { es.close(); setTimeout(()=>location.reload(), 4000); };
+
+showPage(location.hash.slice(1)||'grab');
+refresh(); tick(); setInterval(tick, 250);
+setInterval(async()=>{ if(!S.busy) await refresh(); }, 4000);
+</script>
+</body>
+</html>

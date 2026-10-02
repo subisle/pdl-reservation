@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "g-a-custom-nav-bar": "/node-modules/@dmall/jimoui-mp/components/CustomNavBar/CustomNavBar"
+  }
+}

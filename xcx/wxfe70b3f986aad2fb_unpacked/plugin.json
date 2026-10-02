@@ -1,0 +1,21 @@
+{
+  "renderer": {
+    "allUsed": ["webview"],
+    "default": "webview"
+  },
+  "componentFramework": {
+    "allUsed": ["exparser"],
+    "default": "exparser"
+  },
+  "page": {
+    "__plugin__/wxfe70b3f986aad2fb/pages/challenge/index.html": {
+      "window": {
+        "renderer": "webview",
+        "navigationStyle": "default"
+      }
+    }
+  },
+  "pages": {
+    "challenge": "__plugin__/wxfe70b3f986aad2fb/pages/challenge/index"
+  }
+}

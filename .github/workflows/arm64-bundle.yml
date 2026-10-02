@@ -1,0 +1,32 @@
+name: arm64-bundle
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build arm64 image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm64
+          tags: pdl-reservation:arm64
+          outputs: type=docker,dest=/tmp/pdl-reservation-arm64.tar
+
+      - name: Compress
+        run: gzip /tmp/pdl-reservation-arm64.tar
+
+      - name: Upload release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: arm64-bundle
+          files: /tmp/pdl-reservation-arm64.tar.gz
+          overwrite_files: true

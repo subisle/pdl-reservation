@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "d-barcode": "/packageAssets/coupon/components/barCode/DBarcode"
+  }
+}

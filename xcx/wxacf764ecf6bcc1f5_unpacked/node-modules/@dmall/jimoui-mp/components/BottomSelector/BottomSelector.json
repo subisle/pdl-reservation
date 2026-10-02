@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "g-a-button": "/node-modules/@dmall/jimoui-mp/components/Button/Button",
+    "safe-bottom": "/node-modules/@dmall/jimoui-mp/components/SafeBottom/SafeBottom"
+  },
+  "component": true
+}

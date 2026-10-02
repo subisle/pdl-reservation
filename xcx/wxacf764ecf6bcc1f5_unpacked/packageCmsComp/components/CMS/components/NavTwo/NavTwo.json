@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card": "/packageCmsComp/components/CMS/components/Card/Card"
+  }
+}

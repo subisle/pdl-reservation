@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "lottie-com": "/packageCmsComp/components/CMS/components/lottieCom/lottieCom"
+  }
+}

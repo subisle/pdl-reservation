@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ware-price": "/packageBaseComp/components/Base/WarePrice/WarePrice",
+    "count-down": "/node-modules/@dmall/jimoui-mp/components/CountDown/CountDown"
+  },
+  "componentPlaceholder": {
+    "ware-price": "view"
+  }
+}

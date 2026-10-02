@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "coupon-item": "/packageAssets/coupon/components/couponItem",
+    "d-popup-coupon": "/packageAssets/coupon/components/popupNew",
+    "bar-code-modal": "/packageAssets/coupon/skylCoupon/components/BarCodeModal/BarCodeModal"
+  },
+  "componentPlaceholder": {
+    "coupon-item": "view",
+    "d-popup-coupon": "view",
+    "bar-code-modal": "view"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "g-a-button": "/node-modules/@dmall/jimoui-mp/components/Button/Button"
+  },
+  "component": true
+}

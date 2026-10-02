@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "subscribe-message": "/components/SubscribeMessage/SubscribeMessage",
+    "animation-point": "/components/AnimationPoint/AnimationPoint",
+    "countdown-progress": "/components/CountdownProgress/CountdownProgress",
+    "specifications": "/components/Specifications/Specifications",
+    "home-pop-up": "/components/HomePopUp/HomePopUp",
+    "coupon-goods": "/components/CouponGoods/CouponGoods",
+    "coupon-choose-popup": "/components/CouponChoosePopup/CouponChoosePopup",
+    "coupon-popup": "/components/CouponPopup/CouponPopup",
+    "reservation-popup": "/components/ReservationPopup/ReservationPopup"
+  }
+}

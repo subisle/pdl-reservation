@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "new-coupon-remark": "/packageAssets/giftCoupon/components/Coupon/components/NewCouponRemark/NewCouponRemark"
+  }
+}

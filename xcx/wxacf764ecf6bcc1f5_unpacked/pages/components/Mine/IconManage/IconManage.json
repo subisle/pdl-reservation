@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "icon-list": "/pages/components/Mine/IconManage/IconList/IconList"
+  }
+}

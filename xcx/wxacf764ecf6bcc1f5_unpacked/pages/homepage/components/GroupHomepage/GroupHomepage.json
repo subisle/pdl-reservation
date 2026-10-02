@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-tab-bar": "/components/CustomTabBar/CustomTabBar",
+    "c-m-s": "/packageCmsComp/components/CMS/CMS",
+    "share-dialog": "/packageBaseComp/components/Base/SharePop/SharePop"
+  },
+  "componentPlaceholder": {
+    "c-m-s": "view",
+    "share-dialog": "view"
+  }
+}

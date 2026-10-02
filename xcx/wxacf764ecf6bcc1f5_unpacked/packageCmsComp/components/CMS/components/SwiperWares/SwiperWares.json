@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "swiper-vertical": "/packageCmsComp/components/CMS/components/Swiper/SwiperVertical"
+  }
+}
